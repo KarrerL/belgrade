@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#0f4c5c"/>
+  <!-- deux fleuves : la Save et le Danube qui se rejoignent -->
+  <path d="M60 360 C170 330 230 390 330 350 S470 330 470 330" fill="none" stroke="#5fb3c1" stroke-width="22" stroke-linecap="round"/>
+  <path d="M80 410 C190 380 250 440 350 400 S470 380 470 380" fill="none" stroke="#2b7f8e" stroke-width="18" stroke-linecap="round"/>
+  <!-- remparts de la forteresse -->
+  <path d="M120 300 V200 h36 v-30 h36 v30 h36 v-56 h40 v56 h36 v-30 h36 v30 h36 v100 z" fill="#b5562f"/>
+  <rect x="244" y="96" width="24" height="48" fill="#d9a948"/>
+  <circle cx="256" cy="86" r="16" fill="#d9a948"/>
+</svg>
