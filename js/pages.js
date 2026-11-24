@@ -310,7 +310,7 @@
     const paid = prods.reduce((s, p) => s + (Number(pState(p.id).paid) || 0), 0);
     const cats = [...new Set(prods.map((p) => p.cat))];
     const shown = prods.filter((p) => filter === "all" || (filter === "todo" ? !pState(p.id).bought : pState(p.id).bought));
-    const BAG = { cabine: "Cabine", soute: "Soute", "sur-place": "À consommer sur place", "—": "—" };
+    const BAG = { cabine: "Sac à dos (cabine)", liquide: "Liquide/pâte : 100 ml max en cabine", soute: "Soute", "sur-place": "À consommer sur place", "—": "—" };
     return `
     <div class="stats">
       <div><strong>${prods.length - bought.length}</strong><span>prévus</span></div>

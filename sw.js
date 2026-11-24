@@ -2,7 +2,7 @@
  * - Fichiers du site : pré-cachés à l'installation, servis depuis le cache puis mis à jour en arrière-plan.
  * - Tuiles OpenStreetMap : mises en cache au fil de la consultation (plafond de 400 tuiles).
  * Incrémentez CACHE_VERSION après chaque modification des données ou du code. */
-const CACHE_VERSION = "v9";
+const CACHE_VERSION = "v10";
 const SHELL = `bg-shell-${CACHE_VERSION}`;
 const TILES = "bg-tiles";
 const MAX_TILES = 400;

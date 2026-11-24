@@ -7,6 +7,8 @@ Déplacements : **Yandex Go** pour les 6 trajets longs (aéroport → Piramida �
 
 Programme du dimanche (mis à jour le 24/11/2026) : petit-déjeuner buffet à l'hôtel 06:00 → check-out définitif 06:25, avec les bagages toute la journée → Kalenić → Saint-Sava (court, facultatif) → marché aux puces de Miljakovac → Ušće Shopping Center (en-cas à la place du déjeuner) → départ direct d'Ušće vers l'aéroport à 14:45.
 
+Bagages : **un sac à dos par personne, pas de soute**. Aller Wizz Air : objet personnel 40 × 30 × 20 cm. Retour Air Serbia : sac cabine 8 kg + objet personnel 4 kg. Les liquides et pâtes (ajvar, miel, Eurocrem) sont limités à 100 ml : la liste d'achats en tient compte.
+
 ## Structure
 
 ```

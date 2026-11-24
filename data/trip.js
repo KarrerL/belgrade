@@ -45,14 +45,14 @@ window.TRIP = {
       from: "Nice (NCE)", to: "Belgrade Nikola Tesla (BEG)",
       dep: "09:40", arr: "11:30",
       status: "verifier",
-      note: "Horaires et numéro fournis par vous ; non vérifiés auprès de la compagnie. Vérifiez la carte d'embarquement et l'appli Wizz Air la veille."
+      note: "Horaires et numéro fournis par vous ; non vérifiés auprès de la compagnie. Un sac à dos par personne, sans soute : sans option Priority, seul l'objet personnel de 40 × 30 × 20 cm est gratuit chez Wizz Air (guide 2026, à vérifier sur votre réservation)."
     },
     {
       id: "ret", dir: "Retour", day: "sun", airline: "Air Serbia", number: "JU 252",
       from: "Belgrade Nikola Tesla (BEG)", to: "Nice (NCE)",
       dep: "17:40", arr: "19:45",
       status: "verifier",
-      note: "Horaires et numéro fournis par vous. Objectif : arrivée à l'aéroport vers 15:15–15:30 (≈ 2 h 15 avant le départ)."
+      note: "Horaires et numéro fournis par vous. Objectif : arrivée à l'aéroport vers 15:15–15:30. Sans soute : Air Serbia indique un sac cabine de 8 kg (55 × 40 × 23 cm) + un objet personnel de 4 kg sous le siège, y compris en Economy Light. Un deuxième petit sac est donc possible au retour, à vérifier sur votre billet."
     }
   ],
 
@@ -158,6 +158,9 @@ window.TRIP = {
     stillin_flea: { label: "Still in Belgrade — guide des marchés aux puces (2018, mis à jour 2020)", url: "https://stillinbelgrade.com/guide-belgrade-flea-markets", checked: "2026-11-24" },
     appsavvy_yandex: { label: "App Savvy Traveller — transferts aéroport (Yandex Go ≈ 1 300–2 000 RSD)", url: "https://appsavvytraveller.com/belgrade-airport-transfers/", checked: "2026-11-24" },
     kurir_nbs_nov: { label: "Kurir Biznis — cours NBS du 19/11/2026 (117,6326)", url: "https://biznis.kurir.rs/amp/10166408/kursna-lista-za-cetvrtak-19-novembar", checked: "2026-11-24" },
+    airserbia_bag: { label: "Air Serbia — bagages : sac cabine 8 kg (55 × 40 × 23 cm) + objet personnel 4 kg", url: "https://www.airserbia.com/en/information/baggage", checked: "2026-11-24" },
+    airserbia_liquids: { label: "Air Serbia — liquides en cabine (100 ml, sac transparent, contrôle à Belgrade)", url: "https://www.airserbia.com/en/travel-news/New-rules-for-liquids-in-hand-luggage~55376", checked: "2026-11-24" },
+    wizz_bag: { label: "Guide 2026 des bagages Wizz Air (objet personnel gratuit 40 × 30 × 20 cm, depuis le 1/11/2025)", url: "https://loudavymkrokem.cz/en/wizz-air-luggage/", checked: "2026-11-24" },
     commons: { label: "Wikimedia Commons — photographies sous licence libre", url: "https://commons.wikimedia.org/", checked: "2026-10-27" }
   },
 
@@ -434,7 +437,7 @@ window.TRIP = {
         "Prenez des espèces en petites coupures et négociez : c'est l'usage dans les marchés aux puces.",
         "Gardez sac et téléphone devant vous dans la foule.",
         "Alternative non retenue : le marché aux puces informel de Zemun (Vojni put), le dimanche vers 06:00–10:00 selon un guide local. Adresse exacte et horaires non vérifiés, et il tombe en même temps que Kalenić.",
-        "Achats encombrants : pensez au poids des bagages pour le vol."
+        "Pas de soute : n'achetez que ce qui tient dans vos sacs à dos (ou dans le petit sac supplémentaire autorisé par Air Serbia)."
       ],
       budget: "Achats : 1 000–5 000 RSD (estimation) · Yandex Go ≈ 800–1 200 RSD par trajet (estimation)", duration: "1 h 30",
       phone: "+381 11 7857 940", website: "https://www.bgpijace.rs/",
@@ -450,7 +453,7 @@ window.TRIP = {
         "Je ne peux pas confirmer la présence d'un supermarché, de Lilly ou de dm dans le centre : regardez le plan à l'entrée.",
         "Beaucoup d'enseignes sont les mêmes qu'en France (Zara, etc.) : visez les marques serbes et régionales.",
         "Pour manger : Fish & Bar est cité par un guide (poisson, à vérifier sur place).",
-        "Départ direct pour l'aéroport à 14:45 au plus tard. Je ne peux pas confirmer l'existence d'une consigne à bagages : gardez les valises avec vous, et l'un de vous peut les surveiller pendant que l'autre fait les boutiques.",
+        "Départ direct pour l'aéroport à 14:45 au plus tard. Avec un simple sac à dos chacun, pas besoin de consigne.",
         "Téléphone public : +381 11 285 4505."
       ],
       budget: "En-cas ≈ 800–1 500 RSD/pers. (estimation) + achats",
@@ -559,7 +562,7 @@ window.TRIP = {
     {
       id: "L13", day: "sun", time: "14:45", from: "usce", to: "airport", mode: "taxi",
       duration: "20–30 min (prévoir 40 min si trafic)", distance: "≈ 10,5 km à vol d'oiseau", price: "≈ 1 300–2 000 RSD selon un guide 2026 (prix exact affiché dans Yandex Go)", status: "verifier",
-      instructions: "Commandez un Yandex Go à 14:35 depuis l'entrée principale d'Ušće, côté Bulevar Mihajla Pupina (prix affiché avant validation). Vérifiez que le coffre suffit pour toutes les valises. Départ au plus tard à 15:00.",
+      instructions: "Commandez un Yandex Go à 14:35 depuis l'entrée principale d'Ušće, côté Bulevar Mihajla Pupina (prix affiché avant validation). Départ au plus tard à 15:00.",
       alternative: "CarGo, ou un taxi appelé depuis l'accueil du centre. En dernier recours, le bus 72 (gratuit) passe par Novi Beograd en direction de l'aéroport, toutes les 30 min environ selon un guide : arrêt exact à vérifier, avec départ avancé à 14:15.",
       sources: ["appsavvy_yandex", "eaa_transport", "nomadic_72", "wiki_transport"]
     }
@@ -587,7 +590,8 @@ window.TRIP = {
       tips: [
         "Dès l'arrivée, demandez l'heure de fermeture et le délai des retouches, puis lancez les retouches avant de choisir les accessoires.",
         "Si les retouches ne peuvent pas être prêtes avant la fermeture : voir Plans B (retouche en France).",
-        "Grignotez à l'aéroport ou dans le centre commercial : le vrai repas est à 17:00."
+        "Grignotez à l'aéroport ou dans le centre commercial : le vrai repas est à 17:00.",
+        "Pas de soute : demandez un pliage soigné (papier de soie, housse fine) pour glisser les costumes dans le sac à dos. Au retour, une veste peut se porter dans l'avion."
       ],
       booking: "Appeler +381 11 2168 032 avant le départ pour confirmer l'horaire du samedi 28/11"
     },
@@ -634,7 +638,7 @@ window.TRIP = {
     {
       id: "sat-back", day: "sat", start: "21:45", end: "22:10", place: "hotel", priority: "recommande",
       title: "Retour à l'hôtel",
-      desc: "Retour à pied ou en taxi. Bouclez les valises, préparez les sacs pour le marché et réglez le réveil à 05:45 (buffet dès 06:00).",
+      desc: "Retour à pied ou en taxi. Bouclez les sacs à dos (costumes pliés en haut), gardez de la place pour les achats du dimanche et réglez le réveil à 05:45 (buffet dès 06:00).",
       leg: "L8", budget: "—", tips: ["Sac cabas et espèces pour Kalenić."], booking: null
     },
     {
@@ -642,15 +646,15 @@ window.TRIP = {
       title: "Petit-déjeuner buffet à l'hôtel",
       desc: "Buffet du Nobel Design Hotel, servi de 06:00 à 10:30 : nous y sommes dès l'ouverture. C'est le dernier vrai repas avant l'avion (pas de déjeuner assis) : mangez bien.",
       leg: null, budget: "Selon votre réservation (inclus ou non : à vérifier)",
-      tips: ["Réveil à 05:45, valises bouclées la veille au soir.", "Pour vous au buffet : œufs, fromages, yaourts, pains, poisson fumé s'il y en a ; évitez la charcuterie."],
+      tips: ["Réveil à 05:45, sacs à dos bouclés la veille au soir.", "Pour vous au buffet : œufs, fromages, yaourts, pains, poisson fumé s'il y en a ; évitez la charcuterie."],
       booking: null
     },
     {
       id: "sun-checkout", day: "sun", start: "06:25", end: "06:40", place: "hotel", priority: "imperatif",
       title: "Check-out définitif, départ avec les bagages",
-      desc: "Check-out définitif : nous partons avec tous nos bagages et ne revenons pas à l'hôtel. Les valises nous suivent toute la journée, jusqu'à l'aéroport.",
+      desc: "Check-out définitif : nous partons chacun avec notre sac à dos et ne revenons pas à l'hôtel.",
       leg: null, budget: "—",
-      tips: ["Valises fermées, passeports et chargeur à portée de main, un sac cabas vide pour les achats.", "Costumes dans la housse, en haut de la valise ou à la main.", "Demandez une voiture avec un coffre assez grand en commandant le Yandex Go."],
+      tips: ["Passeports et chargeur à portée de main ; un sac pliable vide pour les achats (il pourra servir d'objet personnel au retour chez Air Serbia).", "Costumes pliés en haut du sac à dos."],
       booking: null
     },
     {
@@ -659,10 +663,11 @@ window.TRIP = {
       desc: "Arrivée vers le lever du soleil (06:52), quand les vendeurs s'installent. Tour complet : halle et étals de fromages et kajmak (dégustation), fruits et légumes d'hiver, conserves (ajvar, turšija), miel, puis la périphérie pour les éventuels stands d'occasion. Les boulangeries autour du marché permettent de goûter un burek si l'envie vous prend.",
       leg: "L9", budget: "1 500–4 000 RSD (estimation)",
       tips: [
-        "Ordre conseillé : 1) produits laitiers (dégustation) ; 2) conserves et ajvar en bocaux fermés ; 3) miel et fruits secs ; 4) périphérie et artisanat.",
+        "Ordre conseillé : 1) produits laitiers (dégustation) ; 2) ajvar et conserves à goûter ; 3) fruits secs et produits solides à rapporter ; 4) périphérie et artisanat.",
+        "Pas de soute : les bocaux (ajvar, miel, turšija) de plus de 100 ml ne passent pas en cabine. Goûtez-les sur place, ou cherchez un format de 100 ml ou moins.",
         "Espèces en petites coupures ; les vendeurs proposent souvent de goûter.",
         "Fromage et kajmak : à consommer sur place, interdits à l'importation dans l'UE.",
-        "Vous portez valises et achats jusqu'à l'aéroport : l'un de vous garde les bagages pendant que l'autre parcourt les allées. Bocaux et achats lourds en fin de visite.",
+        "Vous portez vos sacs à dos jusqu'à l'aéroport : gardez la place pour Ušće et les achats légers.",
         "⚠ Burek : la garniture « sir » est du fromage, mais la pâte peut contenir du saindoux. Demandez « bez masti? »."
       ],
       booking: null
@@ -670,7 +675,7 @@ window.TRIP = {
     {
       id: "sun-sava", day: "sun", start: "08:50", end: "09:20", place: "sava", priority: "facultatif",
       title: "Temple de Saint-Sava (visite courte)",
-      desc: "Extérieur et parvis, puis la nef avec la mosaïque du Pantocrator à tour de rôle (l'un garde les valises dehors). Le dimanche matin a lieu la liturgie : attitude discrète.",
+      desc: "Extérieur et parvis, puis la nef avec la mosaïque du Pantocrator. Le dimanche matin a lieu la liturgie : attitude discrète, sac à dos porté devant ou à la main.",
       leg: "L10", budget: "Gratuit",
       tips: ["Épaules et genoux couverts.", "En cas de retard, sautez cette étape."],
       booking: null, dropOrder: 1
@@ -680,7 +685,7 @@ window.TRIP = {
       title: "Marché aux puces de Belgrade (Beogradski buvljak)",
       desc: "Le marché aux puces officiel de la ville, à Miljakovac : objets, vêtements, outils, curiosités. Flânez, comparez, négociez.",
       leg: "L11", budget: "1 000–5 000 RSD (estimation)",
-      tips: ["Espèces et négociation.", "Gardez les valises devant vous dans la foule.", "Pensez à la place restante dans les valises.", "Commandez le Yandex Go pour Ušće à 11:05."],
+      tips: ["Espèces et négociation.", "Sac à dos porté devant vous dans la foule.", "Pensez à la place restante dans les sacs.", "Commandez le Yandex Go pour Ušće à 11:05."],
       booking: null
     },
     {
@@ -688,7 +693,7 @@ window.TRIP = {
       title: "Ušće Shopping Center (avec un en-cas sur place)",
       desc: "Shopping à Novi Beograd, sans repas assis : un en-cas dans le centre. Si le temps le permet, sortez quelques minutes dans le parc d'Ušće pour la vue sur Kalemegdan.",
       leg: "L12", budget: "En-cas ≈ 800–1 500 RSD/pers. (estimation) + achats",
-      tips: ["Consultez d'abord le plan du centre pour cibler les marques serbes et régionales.", "Avant de partir : bocaux bien emballés en soute, liquides hors du bagage cabine.", "Commandez le Yandex Go pour l'aéroport à 14:35."],
+      tips: ["Consultez d'abord le plan du centre pour cibler les marques serbes et régionales.", "Avant de partir : liquides et pâtes de 100 ml max, regroupés dans un sac transparent (1 L par personne).", "Commandez le Yandex Go pour l'aéroport à 14:35."],
       booking: null
     },
     {
@@ -696,7 +701,7 @@ window.TRIP = {
       title: "Départ pour l'aéroport",
       desc: "Yandex Go directement d'Ušće vers l'aéroport Nikola Tesla. Départ au plus tard à 15:00. Vol Air Serbia JU 252 à 17:40, arrivée à Nice à 19:45.",
       leg: "L13", budget: "≈ 1 300–2 000 RSD (selon un guide 2026)",
-      tips: ["Dépensez ou changez vos derniers dinars avant le contrôle.", "Le contrôle des passeports à la sortie peut prendre du temps."],
+      tips: ["Dépensez ou changez vos derniers dinars avant le contrôle.", "Le contrôle des passeports à la sortie peut prendre du temps.", "Au contrôle de Belgrade, sortez le sac de liquides et posez-le dans le bac (Air Serbia)."],
       booking: "Yandex Go commandé à 14:35 depuis Ušće (sinon CarGo)"
     }
   ],
@@ -769,34 +774,34 @@ window.TRIP = {
 
   /* ------------------------------------------------------------------ */
   /* LISTE D'ACHATS (pré-remplie ; d'autres produits s'ajoutent dans le site) */
-  /* bag : cabine | soute | sur-place                                     */
+  /* bag : cabine | liquide (≤ 100 ml en cabine) | sur-place — voyage sans soute */
   /* ------------------------------------------------------------------ */
   products: [
-    { id: "p-costume", name: "Costume Maestro", cat: "Maestro", price: "11 800 RSD", priceStatus: "confirme", where: "maestro", worth: "Oui : priorité du voyage", fragile: "Encombrant : housse à costume", bag: "cabine", note: "Portez-en un dans l'avion ou utilisez une housse. Vérifiez la franchise de 430 €/personne." },
+    { id: "p-costume", name: "Costume Maestro", cat: "Maestro", price: "11 800 RSD", priceStatus: "confirme", where: "maestro", worth: "Oui : priorité du voyage", fragile: "Encombrant : pliage soigné dans le sac à dos", bag: "cabine", note: "Pas de soute : pliez-le dans le sac à dos (demandez un pliage au magasin) ou portez la veste dans l'avion. Le petit sac de 4 kg autorisé par Air Serbia peut accueillir un costume. Franchise douanière : 430 €/personne." },
     { id: "p-taille", name: "Tailles et coupes à essayer (slim / classique)", cat: "Maestro", price: null, priceStatus: null, where: "maestro", worth: "—", fragile: "—", bag: "—", note: "Notez vos tailles dans le champ quantité ou en commentaire." },
-    { id: "p-chemise", name: "Chemises", cat: "Maestro", price: null, priceStatus: "verifier", where: "maestro", worth: "Si la qualité convient", fragile: "Non", bag: "soute", note: "Prix non publiés." },
-    { id: "p-chaussures", name: "Chaussures", cat: "Maestro", price: null, priceStatus: "verifier", where: "maestro", worth: "À voir sur place", fragile: "Encombrant", bag: "soute", note: "" },
-    { id: "p-ceinture", name: "Ceinture", cat: "Maestro", price: null, priceStatus: "verifier", where: "maestro", worth: "À voir", fragile: "Non", bag: "soute", note: "" },
+    { id: "p-chemise", name: "Chemises", cat: "Maestro", price: null, priceStatus: "verifier", where: "maestro", worth: "Si la qualité convient", fragile: "Non", bag: "cabine", note: "Prix non publiés." },
+    { id: "p-chaussures", name: "Chaussures", cat: "Maestro", price: null, priceStatus: "verifier", where: "maestro", worth: "À voir sur place", fragile: "Encombrant", bag: "cabine", note: "Prennent beaucoup de place dans un sac à dos : n'en achetez que si vous en portez une paire au retour." },
+    { id: "p-ceinture", name: "Ceinture", cat: "Maestro", price: null, priceStatus: "verifier", where: "maestro", worth: "À voir", fragile: "Non", bag: "cabine", note: "" },
     { id: "p-cravate", name: "Cravate", cat: "Maestro", price: null, priceStatus: "verifier", where: "maestro", worth: "À voir", fragile: "Non", bag: "cabine", note: "" },
     { id: "p-gilet", name: "Gilet (éventuel)", cat: "Maestro", price: null, priceStatus: "verifier", where: "maestro", worth: "À voir", fragile: "Non", bag: "cabine", note: "" },
     { id: "p-retouches", name: "Retouches demandées (manches, ourlets)", cat: "Maestro", price: null, priceStatus: "verifier", where: "maestro", worth: "Indispensable", fragile: "—", bag: "—", note: "Faites-les noter sur le ticket avec l'heure de retrait." },
     { id: "p-facture", name: "Facture + conditions de retour", cat: "Maestro", price: null, priceStatus: null, where: "maestro", worth: "Indispensable", fragile: "—", bag: "cabine", note: "Utile pour la douane en cas de contrôle." },
 
-    { id: "p-ajvar", name: "Ajvar (bocal fermé)", cat: "Marché", price: null, priceStatus: "verifier", where: "kalenic", worth: "Oui : spécialité de poivrons, végétale", fragile: "Verre : fragile", bag: "soute", note: "Pâte à tartiner, donc soumise à la règle des 100 ml en cabine. Les marques de supermarché sont une alternative." },
+    { id: "p-ajvar", name: "Ajvar (format 100 ml max)", cat: "Marché", price: null, priceStatus: "verifier", where: "kalenic", worth: "Oui à goûter ; à rapporter seulement en petit format", fragile: "Verre : fragile", bag: "liquide", note: "Pâte à tartiner : pas de soute, donc pot de 100 ml maximum en cabine. Sinon, à déguster sur place." },
     { id: "p-sir", name: "Fromage (sir) et kajmak", cat: "Marché", price: null, priceStatus: "verifier", where: "kalenic", worth: "À déguster sur place seulement", fragile: "Périssable", bag: "sur-place", note: "Importation de produits laitiers dans l'UE interdite pour les voyageurs (règlement 2019/2122)." },
-    { id: "p-miel", name: "Miel", cat: "Marché", price: null, priceStatus: "verifier", where: "kalenic", worth: "Possible", fragile: "Verre : fragile", bag: "soute", note: "Je ne peux pas confirmer la limite applicable au miel : vérifiez la page « personal imports » de la Commission avant d'acheter." },
-    { id: "p-tursija", name: "Turšija (légumes au vinaigre)", cat: "Marché", price: null, priceStatus: "verifier", where: "kalenic", worth: "Oui si bocal bien fermé", fragile: "Verre, liquide", bag: "soute", note: "" },
+    { id: "p-miel", name: "Miel", cat: "Marché", price: null, priceStatus: "verifier", where: "kalenic", worth: "Seulement en petit pot (≤ 100 ml)", fragile: "Verre : fragile", bag: "liquide", note: "Liquide en cabine : 100 ml maximum. Je ne peux pas non plus confirmer la limite douanière du miel : vérifiez la page « personal imports » de la Commission." },
+    { id: "p-tursija", name: "Turšija (légumes au vinaigre)", cat: "Marché", price: null, priceStatus: "verifier", where: "kalenic", worth: "À goûter sur place", fragile: "Verre, liquide", bag: "sur-place", note: "Bocal liquide : impossible en cabine sans soute." },
     { id: "p-vintage", name: "Objet vintage ou artisanal", cat: "Marché", price: null, priceStatus: null, where: "kalenic", worth: "Si coup de cœur", fragile: "Selon l'objet", bag: "cabine", note: "Présence des stands d'occasion non confirmée." },
 
     { id: "p-plazma", name: "Plazma (biscuits, Bambi)", cat: "Supermarché", price: null, priceStatus: "verifier", where: "supermarche", worth: "Oui : biscuit emblématique serbe depuis 1967", fragile: "Se brise", bag: "cabine", note: "Biscuits : exemptés de contrôle sanitaire dans les bagages (moins de 20 % de produits laitiers et d'œufs transformés)." },
-    { id: "p-smoki", name: "Smoki (soufflés à la cacahuète)", cat: "Supermarché", price: null, priceStatus: "verifier", where: "supermarche", worth: "Oui : snack culte", fragile: "Volumineux", bag: "soute", note: "Fabricant à vérifier sur l'emballage." },
-    { id: "p-eurocrem", name: "Eurocrem (pâte à tartiner bicolore, Takovo)", cat: "Supermarché", price: null, priceStatus: "verifier", where: "supermarche", worth: "Oui : fabriquée à Gornji Milanovac", fragile: "Pot", bag: "soute", note: "Pâte à tartiner : soumise aux 100 ml en cabine. Certaines pâtes au cacao sont exemptées depuis 2023 : vérifiez la teneur en lait." },
+    { id: "p-smoki", name: "Smoki (soufflés à la cacahuète)", cat: "Supermarché", price: null, priceStatus: "verifier", where: "supermarche", worth: "Oui : snack culte", fragile: "Volumineux", bag: "cabine", note: "Volumineux : un ou deux sachets maximum dans un sac à dos. Fabricant à vérifier sur l'emballage." },
+    { id: "p-eurocrem", name: "Eurocrem (pâte à tartiner bicolore, Takovo)", cat: "Supermarché", price: null, priceStatus: "verifier", where: "supermarche", worth: "Oui, en petit format (≤ 100 ml) ou à manger sur place", fragile: "Pot", bag: "liquide", note: "Pâte à tartiner : 100 ml maximum en cabine. Certaines pâtes au cacao sont exemptées du contrôle sanitaire depuis 2023, mais la règle des 100 ml s'applique quand même." },
     { id: "p-zelje", name: "Najlepše želje (chocolat)", cat: "Supermarché", price: null, priceStatus: "verifier", where: "supermarche", worth: "Oui", fragile: "Chaleur", bag: "cabine", note: "Origine serbe à vérifier sur l'emballage." },
     { id: "p-bananica", name: "Bananica / « Bananko »", cat: "Supermarché", price: null, priceStatus: "verifier", where: "supermarche", worth: "Oui pour Bananica", fragile: "Fragile", bag: "cabine", note: "Bananica : née en 1938 à l'usine Roda, ancêtre de Štark. Je ne peux pas confirmer la marque « Bananko »." },
     { id: "p-medeno", name: "Medeno srce (cœur en pain d'épices)", cat: "Supermarché", price: null, priceStatus: "verifier", where: "supermarche", worth: "Souvenir sucré", fragile: "Fragile", bag: "cabine", note: "Je ne peux pas confirmer le fabricant ni l'origine." },
     { id: "p-jaffa", name: "Jaffa (biscuits à l'orange)", cat: "Supermarché", price: null, priceStatus: "verifier", where: "supermarche", worth: "Oui", fragile: "Se brise", bag: "cabine", note: "Origine (Crvenka, Serbie) non vérifiée ici : regardez l'emballage." },
     { id: "p-gaufrettes", name: "Gaufrettes balkaniques", cat: "Supermarché", price: null, priceStatus: "verifier", where: "supermarche", worth: "Oui", fragile: "Se brise", bag: "cabine", note: "Vérifiez l'origine : beaucoup de marques en rayon sont croates ou slovènes." },
-    { id: "p-sale", name: "Snacks salés locaux", cat: "Supermarché", price: null, priceStatus: "verifier", where: "supermarche", worth: "À tester", fragile: "Volumineux", bag: "soute", note: "" },
+    { id: "p-sale", name: "Snacks salés locaux", cat: "Supermarché", price: null, priceStatus: "verifier", where: "supermarche", worth: "À tester", fragile: "Volumineux", bag: "cabine", note: "Volumineux : à limiter." },
     { id: "p-boissons", name: "Boissons régionales", cat: "Supermarché", price: null, priceStatus: "verifier", where: "supermarche", worth: "À boire sur place", fragile: "Lourd", bag: "sur-place", note: "Liquides > 100 ml interdits en cabine." },
 
     { id: "p-design", name: "Cadeau de créateur (Design District)", cat: "Souvenirs", price: null, priceStatus: "verifier", where: "design", worth: "Oui", fragile: "Selon l'objet", bag: "cabine", note: "" },
@@ -839,7 +844,8 @@ window.TRIP = {
       "Ouvrir ce site une fois en ligne sur le téléphone (mise en cache) et l'ajouter à l'écran d'accueil",
       "Prévenir la banque du voyage ; vérifier les frais de paiement et de retrait hors zone euro",
       "Vérifier le forfait mobile : la Serbie n'est pas incluse dans l'itinérance UE",
-      "Housse à costume et sacs zip pour les bocaux"
+      "Sac à dos de 40 × 30 × 20 cm maximum à l'aller (objet personnel Wizz Air) + sac pliable pour le retour (Air Serbia : sac cabine 8 kg + objet personnel 4 kg)",
+      "Sac plastique transparent de 1 L pour les liquides"
     ]},
     { id: "resa", name: "Réservations", items: [
       "Dîner au Pavilion (Dobračina 39) sam. 20:00, au +381 69 369 6369",
@@ -861,10 +867,10 @@ window.TRIP = {
       "Facture et conditions d'échange"
     ]},
     { id: "alim", name: "Achats alimentaires", items: [
-      "Ajvar (bocal scellé, en soute)",
+      "Ajvar : petit pot de 100 ml maximum, sinon à goûter sur place",
       "Biscuits et snacks serbes (voir onglet Achats)",
       "Goûter kajmak et fromage sur place, ne pas les rapporter",
-      "Bocaux emballés dans des vêtements et des sacs zip"
+      "Pas de grand bocal : biscuits et snacks secs pour les cadeaux"
     ]},
     { id: "souv", name: "Souvenirs", items: [
       "Cadeau de créateur (Design District)",
@@ -872,9 +878,9 @@ window.TRIP = {
       "Petits cadeaux en droguerie (Lilly)"
     ]},
     { id: "final", name: "Avant l'aéroport", items: [
-      "Liquides et pâtes à tartiner > 100 ml en soute",
-      "Costumes dans la housse, en cabine",
-      "Poids des bagages contrôlé",
+      "Liquides et pâtes : 100 ml maximum, dans le sac transparent",
+      "Costumes pliés dans les sacs à dos (ou veste portée)",
+      "Sacs dans les limites Air Serbia : 8 kg en cabine + 4 kg d'objet personnel",
       "Rien oublié dans la chambre ni à la consigne",
       "Départ d'Ušće pour l'aéroport à 14:45 au plus tard",
       "Derniers dinars dépensés",
@@ -915,8 +921,8 @@ window.TRIP = {
       action: "Commandez le Yandex Go pour l'aéroport à 14:15 au lieu de 14:35 (l'appli indique la durée avec le trafic). Départ d'Ušće à 15:00 au plus tard dans tous les cas.",
       keep: "Le vol.", drop: "Derniers achats, puis café." },
     { id: "b-bags", title: "Trop d'achats pour les bagages", icon: "bag",
-      action: "Achetez un sac pliable ou une valise bon marché (Ušće ou le marché aux puces). Vérifiez les franchises bagages de l'Air Serbia JU 252. Payez un bagage en soute en ligne avant 14:00 (moins cher qu'au comptoir, en général). Liquides et bocaux en soute. Comme vous portez les valises toute la journée, limitez les achats lourds avant Ušće.",
-      keep: "Costumes en cabine.", drop: "Snacks volumineux (Smoki) : à manger sur place !" }
+      action: "Utilisez le deuxième bagage autorisé par Air Serbia (objet personnel de 4 kg, en plus du sac cabine de 8 kg) avec un sac pliable. Si cela ne suffit pas : ajoutez un bagage en soute sur votre réservation Air Serbia (payant en Economy Light) avant de partir pour l'aéroport. Seule la soute permet de rapporter des bocaux de plus de 100 ml.",
+      keep: "Costumes.", drop: "Bocaux, boissons et snacks volumineux (Smoki) : à consommer sur place !" }
   ],
 
   emergency: [
@@ -932,7 +938,8 @@ window.TRIP = {
   customs: [
     { title: "Produits laitiers et viande : interdits", text: "Les voyageurs venant d'un pays hors UE comme la Serbie ne peuvent pas rapporter de viande, de lait ni de produits laitiers (fromage, kajmak) dans leurs bagages, sauf quelques exceptions (aliments pour bébé ou médicaux).", status: "confirme", sources: ["eu_personal", "zoll"] },
     { title: "Biscuits, chocolats, confiseries : en général autorisés", text: "Les produits composites de longue conservation sont exemptés : biscuits et gaufrettes (moins de 20 % de produits laitiers et d'œufs transformés), chocolat et confiserie. Un règlement de 2023 a ajouté les crackers et certaines pâtes à tartiner au cacao. Lisez les étiquettes.", status: "verifier", sources: ["composite"] },
-    { title: "Liquides en cabine (sûreté aérienne)", text: "Règle distincte de la douane : les liquides, gels et pâtes (ajvar, Eurocrem, miel) au-delà de 100 ml voyagent en soute. Les règles exactes de l'aéroport de Belgrade et d'Air Serbia sont à vérifier.", status: "verifier", sources: [] },
+    { title: "Liquides en cabine : 100 ml maximum (pas de soute)", text: "Règle de sûreté, distincte de la douane. Sans bagage en soute, les liquides, gels et pâtes (ajvar, Eurocrem, miel, turšija, boissons) ne passent qu'en contenants de 100 ml maximum, dans un sac transparent refermable d'environ 1 L par personne. Un contenant plus grand est refusé même s'il est à moitié vide. À Belgrade, sortez ce sac au contrôle.", status: "confirme", sources: ["airserbia_liquids"] },
+    { title: "Bagages : un sac à dos par personne", text: "Aller (Wizz Air) : sans option Priority, seul l'objet personnel de 40 × 30 × 20 cm est gratuit, depuis le 1/11/2025 selon un guide. Retour (Air Serbia) : sac cabine de 8 kg (55 × 40 × 23 cm) + objet personnel de 4 kg sous le siège, y compris en Economy Light. Vérifiez sur vos réservations.", status: "verifier", sources: ["wizz_bag", "airserbia_bag"] },
     { title: "Franchise de valeur : 430 € par personne", text: "À l'arrivée en France par avion depuis un pays hors UE, les achats sont exonérés jusqu'à 430 € par voyageur de 15 ans ou plus. Au-delà, déclarez-les au circuit rouge et payez la TVA et les droits. Tabac et alcool ont leurs propres limites. Deux costumes à 11 800 RSD (≈ 200 €) restent sous le seuil.", status: "confirme", sources: ["douane_430"] }
   ],
 

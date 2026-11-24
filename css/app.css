@@ -287,7 +287,7 @@ body.offline .day-h { top: 34px; }
 .prod-in label { display: flex; flex-direction: column; font-size: .75rem; color: var(--muted); font-weight: 600; }
 .prod-in input { width: 110px; }
 .bag { font-weight: 700; }
-.bag.cabine { color: var(--est); } .bag.soute { color: var(--brick); } .bag.sur-place { color: var(--warn); }
+.bag.cabine { color: var(--est); } .bag.soute, .bag.liquide { color: var(--brick); } .bag.sur-place { color: var(--warn); }
 .form-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); margin-bottom: 12px; }
 .form-grid label { display: flex; flex-direction: column; gap: 4px; font-size: .82rem; font-weight: 600; color: var(--muted); }
 .shop { padding: 12px 0; border-bottom: 1px solid var(--line); }
