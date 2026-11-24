@@ -64,12 +64,11 @@ window.TRIP = {
     { day: "sat", time: "16:01", label: "Coucher du soleil : être au belvédère de Kalemegdan", status: "estime", place: "kalemegdan" },
     { day: "sat", time: "20:00", label: "Table réservée au Pavilion (fermeture annoncée à 22:00)", status: "verifier", place: "pavilion" },
     { day: "sun", time: "06:00", label: "Petit-déjeuner buffet à l'hôtel dès l'ouverture (06:00–10:30, horaires donnés par vous)", status: "verifier", place: "hotel" },
-    { day: "sun", time: "06:25", label: "Check-out et bagages laissés à la réception", status: "verifier", place: "hotel" },
+    { day: "sun", time: "06:25", label: "Check-out définitif, on part avec les bagages", status: "verifier", place: "hotel" },
     { day: "sun", time: "06:40", label: "Yandex Go de l'hôtel vers Kalenić", status: "estime", place: "hotel" },
     { day: "sun", time: "09:20", label: "Yandex Go vers le marché aux puces (ouvert dès 08:00)", status: "confirme", place: "miljakovac" },
     { day: "sun", time: "11:10", label: "Yandex Go vers Ušće (ouvert 10:00–22:00)", status: "verifier", place: "usce" },
-    { day: "sun", time: "13:50", label: "Quitter Ušće, sans exception, pour l'hôtel", status: "estime", place: "usce" },
-    { day: "sun", time: "14:45", label: "Départ pour l'aéroport (15:00 au plus tard)", status: "estime", place: "hotel" },
+        { day: "sun", time: "14:45", label: "Départ d'Ušće directement pour l'aéroport (15:00 au plus tard)", status: "estime", place: "usce" },
     { day: "sun", time: "17:40", label: "Décollage JU 252 vers Nice", status: "verifier", place: "airport" }
   ],
 
@@ -191,8 +190,8 @@ window.TRIP = {
       why: "Camp de base idéal : presque tout le programme se fait à pied depuis l'hôtel.",
       tips: [
         "Hotels.com et Kayak indiquent un check-in à 15:00 et un check-out à 12:00. D'anciennes fiches (« LifeDesign Hotel ») indiquent 14:00 avec early check-in payant (4 920 RSD) : à confirmer avec l'hôtel.",
-        "Écrivez à l'hôtel avant le départ : dépôt des bagages possible le samedi ? check-out le dimanche à 06:25 (après le buffet de 06:00) et garde des bagages jusqu'à 14:45 ?",
-        "Le dimanche, nous ne repassons qu'à 14:05 : un départ tardif ne sert que si vous voulez garder la chambre."
+        "Écrivez à l'hôtel avant le départ : dépôt des bagages possible le samedi ? check-out le dimanche à 06:25 (après le buffet de 06:00) ?",
+        "Le dimanche, nous partons avec nos bagages après le check-out et ne revenons pas à l'hôtel."
       ],
       budget: "Déjà réservé",
       duration: "—",
@@ -451,11 +450,11 @@ window.TRIP = {
         "Je ne peux pas confirmer la présence d'un supermarché, de Lilly ou de dm dans le centre : regardez le plan à l'entrée.",
         "Beaucoup d'enseignes sont les mêmes qu'en France (Zara, etc.) : visez les marques serbes et régionales.",
         "Pour manger : Fish & Bar est cité par un guide (poisson, à vérifier sur place).",
-        "Quittez le centre à 13:50 au plus tard : bagages à l'hôtel, puis l'aéroport.",
+        "Départ direct pour l'aéroport à 14:45 au plus tard. Je ne peux pas confirmer l'existence d'une consigne à bagages : gardez les valises avec vous, et l'un de vous peut les surveiller pendant que l'autre fait les boutiques.",
         "Téléphone public : +381 11 285 4505."
       ],
       budget: "En-cas ≈ 800–1 500 RSD/pers. (estimation) + achats",
-      duration: "2 h 15",
+      duration: "≈ 3 h",
       phone: "+381 11 285 4505", website: null,
       sources: ["pp_usce", "apt_usce", "tob_usce"]
     },
@@ -554,21 +553,14 @@ window.TRIP = {
       id: "L12", day: "sun", time: "11:10", from: "miljakovac", to: "usce", mode: "taxi",
       duration: "20–25 min", distance: "≈ 7,5 km à vol d'oiseau", price: "≈ 1 000–1 400 RSD (estimation)", status: "estime",
       instructions: "Yandex Go depuis l'entrée du marché. Destination : « Ušće Shopping Center, Bulevar Mihajla Pupina 4 ».",
-      alternative: "CarGo. Si le trafic est dense, l'appli affiche la durée : raccourcissez Ušće plutôt que le temps prévu à l'hôtel.",
+      alternative: "CarGo. Si le trafic est dense, l'appli affiche la durée : raccourcissez Ušće, jamais la marge de l'aéroport.",
       sources: []
     },
     {
-      id: "L13", day: "sun", time: "13:50", from: "usce", to: "hotel", mode: "taxi",
-      duration: "10–15 min", distance: "≈ 2 km (pont Brankov most)", price: "≈ 500–800 RSD (estimation)", status: "estime",
-      instructions: "Yandex Go depuis l'entrée principale d'Ušće, côté Bulevar Mihajla Pupina.",
-      alternative: "À pied par le pont Brankov most, ≈ 30 min : seulement si aucune voiture n'est disponible avant 14:00.",
-      sources: []
-    },
-    {
-      id: "L14", day: "sun", time: "14:45", from: "hotel", to: "airport", mode: "taxi",
-      duration: "25–35 min (prévoir 45 min si trafic)", distance: "≈ 12,5 km à vol d'oiseau", price: "≈ 1 300–2 000 RSD selon un guide 2026 (prix exact affiché dans Yandex Go)", status: "verifier",
-      instructions: "Commandez un Yandex Go à 14:35 depuis la réception (prix affiché avant validation). Départ au plus tard à 15:00.",
-      alternative: "Taxi commandé par la réception, ou CarGo. En dernier recours, bus A1 (minibus vers l'aéroport depuis Slavija, ≈ 400 RSD en espèces en 2024, 30–40 min) ou bus 72 gratuit depuis Zeleni venac (plus lent, toutes les 30 min environ) : seulement si aucun taxi n'est disponible, avec départ avancé à 14:15.",
+      id: "L13", day: "sun", time: "14:45", from: "usce", to: "airport", mode: "taxi",
+      duration: "20–30 min (prévoir 40 min si trafic)", distance: "≈ 10,5 km à vol d'oiseau", price: "≈ 1 300–2 000 RSD selon un guide 2026 (prix exact affiché dans Yandex Go)", status: "verifier",
+      instructions: "Commandez un Yandex Go à 14:35 depuis l'entrée principale d'Ušće, côté Bulevar Mihajla Pupina (prix affiché avant validation). Vérifiez que le coffre suffit pour toutes les valises. Départ au plus tard à 15:00.",
+      alternative: "CarGo, ou un taxi appelé depuis l'accueil du centre. En dernier recours, le bus 72 (gratuit) passe par Novi Beograd en direction de l'aéroport, toutes les 30 min environ selon un guide : arrêt exact à vérifier, avec départ avancé à 14:15.",
       sources: ["appsavvy_yandex", "eaa_transport", "nomadic_72", "wiki_transport"]
     }
   ],
@@ -602,10 +594,10 @@ window.TRIP = {
     {
       id: "sat-hotel", day: "sat", start: "15:10", end: "15:30", place: "hotel", priority: "imperatif",
       title: "Check-in au Nobel Design Hotel",
-      desc: "Check-in annoncé à partir de 15:00 : dépôt des bagages et des costumes. Demandez la garde des bagages pour dimanche.",
+      desc: "Check-in annoncé à partir de 15:00 : dépôt des bagages et des costumes.",
       leg: "L2", budget: "—",
       tips: ["Suspendez les costumes dès l'arrivée.", "Demandez à la réception où le chauffeur Yandex peut s'arrêter devant l'hôtel."],
-      booking: "Confirmer par e-mail l'heure de check-in et la garde des bagages"
+      booking: "Confirmer par e-mail l'heure de check-in"
     },
     {
       id: "sat-kalemegdan", day: "sat", start: "15:55", end: "16:45", place: "kalemegdan", priority: "imperatif",
@@ -655,11 +647,11 @@ window.TRIP = {
     },
     {
       id: "sun-checkout", day: "sun", start: "06:25", end: "06:40", place: "hotel", priority: "imperatif",
-      title: "Check-out et bagages à la réception",
-      desc: "Nous ne repassons à l'hôtel qu'à 14:05, après l'heure de check-out (12:00) : check-out dès le matin, bagages laissés à la réception jusqu'à 14:45.",
+      title: "Check-out définitif, départ avec les bagages",
+      desc: "Check-out définitif : nous partons avec tous nos bagages et ne revenons pas à l'hôtel. Les valises nous suivent toute la journée, jusqu'à l'aéroport.",
       leg: null, budget: "—",
-      tips: ["Gardez sur vous passeports, chargeur et un sac cabas vide pour les achats.", "Costumes déjà rangés dans la housse."],
-      booking: "Garde des bagages de 06:25 à 14:45 (à confirmer avec l'hôtel)"
+      tips: ["Valises fermées, passeports et chargeur à portée de main, un sac cabas vide pour les achats.", "Costumes dans la housse, en haut de la valise ou à la main.", "Demandez une voiture avec un coffre assez grand en commandant le Yandex Go."],
+      booking: null
     },
     {
       id: "sun-kalenic", day: "sun", start: "06:50", end: "08:40", place: "kalenic", priority: "imperatif",
@@ -670,7 +662,7 @@ window.TRIP = {
         "Ordre conseillé : 1) produits laitiers (dégustation) ; 2) conserves et ajvar en bocaux fermés ; 3) miel et fruits secs ; 4) périphérie et artisanat.",
         "Espèces en petites coupures ; les vendeurs proposent souvent de goûter.",
         "Fromage et kajmak : à consommer sur place, interdits à l'importation dans l'UE.",
-        "Vous porterez vos achats jusqu'à 14:05 : gardez les bocaux et achats lourds pour la fin de la visite.",
+        "Vous portez valises et achats jusqu'à l'aéroport : l'un de vous garde les bagages pendant que l'autre parcourt les allées. Bocaux et achats lourds en fin de visite.",
         "⚠ Burek : la garniture « sir » est du fromage, mais la pâte peut contenir du saindoux. Demandez « bez masti? »."
       ],
       booking: null
@@ -678,7 +670,7 @@ window.TRIP = {
     {
       id: "sun-sava", day: "sun", start: "08:50", end: "09:20", place: "sava", priority: "facultatif",
       title: "Temple de Saint-Sava (visite courte)",
-      desc: "Extérieur et nef avec la mosaïque du Pantocrator. Le dimanche matin a lieu la liturgie : attitude discrète.",
+      desc: "Extérieur et parvis, puis la nef avec la mosaïque du Pantocrator à tour de rôle (l'un garde les valises dehors). Le dimanche matin a lieu la liturgie : attitude discrète.",
       leg: "L10", budget: "Gratuit",
       tips: ["Épaules et genoux couverts.", "En cas de retard, sautez cette étape."],
       booking: null, dropOrder: 1
@@ -688,32 +680,24 @@ window.TRIP = {
       title: "Marché aux puces de Belgrade (Beogradski buvljak)",
       desc: "Le marché aux puces officiel de la ville, à Miljakovac : objets, vêtements, outils, curiosités. Flânez, comparez, négociez.",
       leg: "L11", budget: "1 000–5 000 RSD (estimation)",
-      tips: ["Espèces et négociation.", "Pensez à la place dans les valises.", "Commandez le Yandex Go pour Ušće à 11:05."],
+      tips: ["Espèces et négociation.", "Gardez les valises devant vous dans la foule.", "Pensez à la place restante dans les valises.", "Commandez le Yandex Go pour Ušće à 11:05."],
       booking: null
     },
     {
-      id: "sun-usce", day: "sun", start: "11:35", end: "13:50", place: "usce", priority: "imperatif",
+      id: "sun-usce", day: "sun", start: "11:35", end: "14:40", place: "usce", priority: "imperatif",
       title: "Ušće Shopping Center (avec un en-cas sur place)",
       desc: "Shopping à Novi Beograd, sans repas assis : un en-cas dans le centre. Si le temps le permet, sortez quelques minutes dans le parc d'Ušće pour la vue sur Kalemegdan.",
       leg: "L12", budget: "En-cas ≈ 800–1 500 RSD/pers. (estimation) + achats",
-      tips: ["Consultez d'abord le plan du centre pour cibler les marques serbes et régionales.", "Départ à 13:50 au plus tard."],
-      booking: null
-    },
-    {
-      id: "sun-bags", day: "sun", start: "14:05", end: "14:40", place: "hotel", priority: "imperatif",
-      title: "Retour à l'hôtel : bagages et rangement",
-      desc: "Récupération des bagages, rangement des achats (bocaux en soute, bien emballés), dernière vérification.",
-      leg: "L13", budget: "—",
-      tips: ["Emballez les bocaux dans des vêtements, dans des sacs zip.", "Commandez le Yandex Go pour l'aéroport à 14:35."],
+      tips: ["Consultez d'abord le plan du centre pour cibler les marques serbes et régionales.", "Avant de partir : bocaux bien emballés en soute, liquides hors du bagage cabine.", "Commandez le Yandex Go pour l'aéroport à 14:35."],
       booking: null
     },
     {
       id: "sun-airport", day: "sun", start: "14:45", end: "15:20", place: "airport", priority: "imperatif",
       title: "Départ pour l'aéroport",
-      desc: "Yandex Go de l'hôtel vers l'aéroport Nikola Tesla. Départ au plus tard à 15:00. Vol Air Serbia JU 252 à 17:40, arrivée à Nice à 19:45.",
-      leg: "L14", budget: "≈ 1 300–2 000 RSD (selon un guide 2026)",
+      desc: "Yandex Go directement d'Ušće vers l'aéroport Nikola Tesla. Départ au plus tard à 15:00. Vol Air Serbia JU 252 à 17:40, arrivée à Nice à 19:45.",
+      leg: "L13", budget: "≈ 1 300–2 000 RSD (selon un guide 2026)",
       tips: ["Dépensez ou changez vos derniers dinars avant le contrôle.", "Le contrôle des passeports à la sortie peut prendre du temps."],
-      booking: "Yandex Go commandé à 14:35 (sinon taxi par la réception)"
+      booking: "Yandex Go commandé à 14:35 depuis Ušće (sinon CarGo)"
     }
   ],
 
@@ -751,7 +735,7 @@ window.TRIP = {
     {
       id: "centres", name: "Centres commerciaux", icon: "store",
       items: [
-        { place: "usce", products: "Mode, beauté, électronique, maison, sport ; restaurants", why: "Demandé ; plus de 150 boutiques, ouvert le dimanche", proximity: "Dimanche 11:35–13:50" }
+        { place: "usce", products: "Mode, beauté, électronique, maison, sport ; restaurants", why: "Demandé ; plus de 150 boutiques, ouvert le dimanche", proximity: "Dimanche 11:35–14:40, puis départ direct pour l'aéroport" }
       ]
     },
     {
@@ -826,7 +810,7 @@ window.TRIP = {
   budget: {
     note: "Montants estimés pour 2 personnes, hors vols et hôtel. Seul le prix d'un costume Maestro (11 800 RSD) provient d'une source officielle ; tout le reste est une estimation. Aucun montant n'est un tarif imposé.",
     categories: [
-      { id: "transports", name: "Transports", essential: true, scenarios: { eco: 7000, confort: 9000, genereux: 11000 }, basis: "7 courses Yandex Go : aéroport ×2 (≈ 1 300–2 000), Piramida, Kalenić, marché aux puces, Ušće, hôtel" },
+      { id: "transports", name: "Transports", essential: true, scenarios: { eco: 7000, confort: 9000, genereux: 11000 }, basis: "6 courses Yandex Go : aéroport ×2 (≈ 1 300–2 000), Piramida → hôtel, hôtel → Kalenić, marché aux puces, Ušće" },
       { id: "repas", name: "Repas", essential: true, scenarios: { eco: 10000, confort: 16000, genereux: 22000 }, basis: "Kafana « ? », Pavilion, en-cas à Ušće (petit-déjeuner à l'hôtel selon la réservation)" },
       { id: "cafes", name: "Cafés", essential: false, scenarios: { eco: 1500, confort: 3000, genereux: 5000 }, basis: "≈ 300–500 RSD le café (estimation)" },
       { id: "visites", name: "Visites", essential: false, scenarios: { eco: 0, confort: 0, genereux: 2400 }, basis: "Sites gratuits ; option visite guidée de Saint-Sava 10 €/pers." },
@@ -849,7 +833,7 @@ window.TRIP = {
     { id: "avant", name: "Avant le départ", items: [
       "Passeports valides (la Serbie est hors UE et hors Schengen)",
       "Appeler Maestro (+381 11 2168 032) : confirmer 09:00–16:00 le sam. 28/11 et des retouches prêtes avant 16:00",
-      "E-mail à l'hôtel : check-in samedi, check-out dimanche à 06:25 et garde des bagages jusqu'à 14:45 ; petit-déjeuner inclus ?",
+      "E-mail à l'hôtel : check-in samedi, check-out dimanche à 06:25 ; petit-déjeuner inclus ?",
       "Installer Yandex Go (moyen principal), vérifier le mode de paiement proposé (carte ou espèces) ; CarGo en secours",
       "Télécharger la carte hors ligne de Belgrade dans Google Maps",
       "Ouvrir ce site une fois en ligne sur le téléphone (mise en cache) et l'ajouter à l'écran d'accueil",
@@ -859,7 +843,7 @@ window.TRIP = {
     ]},
     { id: "resa", name: "Réservations", items: [
       "Dîner au Pavilion (Dobračina 39) sam. 20:00, au +381 69 369 6369",
-      "Yandex Go dim. 14:35 vers l'aéroport (plan B : taxi par la réception)",
+      "Yandex Go dim. 14:35 d'Ušće vers l'aéroport (plan B : CarGo)",
       "Check-in en ligne Wizz Air (aller)",
       "Check-in en ligne Air Serbia (retour)"
     ]},
@@ -892,7 +876,7 @@ window.TRIP = {
       "Costumes dans la housse, en cabine",
       "Poids des bagages contrôlé",
       "Rien oublié dans la chambre ni à la consigne",
-      "Départ d'Ušće à 13:50 au plus tard",
+      "Départ d'Ušće pour l'aéroport à 14:45 au plus tard",
       "Derniers dinars dépensés",
       "Départ de l'hôtel au plus tard à 15:00"
     ]}
@@ -922,16 +906,16 @@ window.TRIP = {
       action: "Samedi : Tri šešira (Skadarska 29, à 300 m, ouvert jusqu'à 22:30 selon Wolt), ou les autres kafanas de Skadarlija. Dimanche : pas de repas assis prévu ; en-cas à Ušće.",
       keep: "Un vrai repas serbe.", drop: "—" },
     { id: "b-museum", title: "Saint-Sava inaccessible (office, événement)", icon: "church",
-      action: "Admirez l'extérieur et le parvis, puis revenez plus tôt à l'hôtel. La crypte n'est pas garantie le dimanche.",
+      action: "Admirez l'extérieur et le parvis, puis partez plus tôt au marché aux puces. La crypte n'est pas garantie le dimanche.",
       keep: "Le marché.", drop: "La visite intérieure." },
     { id: "b-app", title: "Appli de transport en panne", icon: "phone",
       action: "Si Yandex Go ne trouve pas de voiture ou ne fonctionne pas : CarGo. Sinon faites appeler un taxi par l'hôtel ou le restaurant. À l'aéroport : le kiosque des bons de taxi. Transports publics gratuits depuis le 01/01/2025 ; bus 72 vers l'aéroport depuis Zeleni venac. N'utilisez pas Uber : il ne fonctionne pas en Serbie.",
       keep: "La marge de l'aéroport.", drop: "—" },
     { id: "b-traffic", title: "Trafic important vers l'aéroport", icon: "car",
-      action: "Quittez Ušće à 13:30 au lieu de 13:50 et commandez le Yandex Go pour l'aéroport à 14:20 (l'appli indique la durée avec le trafic). Départ de l'hôtel à 15:00 au plus tard dans tous les cas.",
+      action: "Commandez le Yandex Go pour l'aéroport à 14:15 au lieu de 14:35 (l'appli indique la durée avec le trafic). Départ d'Ušće à 15:00 au plus tard dans tous les cas.",
       keep: "Le vol.", drop: "Derniers achats, puis café." },
     { id: "b-bags", title: "Trop d'achats pour les bagages", icon: "bag",
-      action: "Achetez un sac pliable ou une valise bon marché. Vérifiez les franchises bagages de l'Air Serbia JU 252. Payez un bagage en soute en ligne avant 14:00 (moins cher qu'au comptoir, en général). Liquides et bocaux en soute.",
+      action: "Achetez un sac pliable ou une valise bon marché (Ušće ou le marché aux puces). Vérifiez les franchises bagages de l'Air Serbia JU 252. Payez un bagage en soute en ligne avant 14:00 (moins cher qu'au comptoir, en général). Liquides et bocaux en soute. Comme vous portez les valises toute la journée, limitez les achats lourds avant Ušće.",
       keep: "Costumes en cabine.", drop: "Snacks volumineux (Smoki) : à manger sur place !" }
   ],
 

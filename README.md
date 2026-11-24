@@ -3,9 +3,9 @@
 Site web progressif (PWA) pour suivre le voyage sur téléphone : planning heure par heure, carte, fiches des lieux, achats, budget, transports, checklists et plans B.
 Aucun compte ni serveur de données. Vos cases cochées, achats et dépenses restent **sur l'appareil**.
 
-Déplacements : **Yandex Go** pour les 7 trajets longs (aéroport → Piramida → hôtel le samedi ; hôtel → Kalenić, Saint-Sava → marché aux puces → Ušće → hôtel → aéroport le dimanche) ; **à pied** pour tout le reste.
+Déplacements : **Yandex Go** pour les 6 trajets longs (aéroport → Piramida → hôtel le samedi ; hôtel → Kalenić, Saint-Sava → marché aux puces → Ušće → aéroport le dimanche) ; **à pied** pour tout le reste.
 
-Programme du dimanche (mis à jour le 24/11/2026) : petit-déjeuner buffet à l'hôtel 06:00 → check-out 06:25 → Kalenić → Saint-Sava (court, facultatif) → marché aux puces de Miljakovac → Ušće Shopping Center (en-cas à la place du déjeuner) → bagages → aéroport à 14:45. Secours : CarGo, taxi appelé par l'hôtel, bon de taxi de l'aéroport.
+Programme du dimanche (mis à jour le 24/11/2026) : petit-déjeuner buffet à l'hôtel 06:00 → check-out définitif 06:25, avec les bagages toute la journée → Kalenić → Saint-Sava (court, facultatif) → marché aux puces de Miljakovac → Ušće Shopping Center (en-cas à la place du déjeuner) → départ direct d'Ušće vers l'aéroport à 14:45.
 
 ## Structure
 
@@ -74,7 +74,7 @@ Scripts utiles : `python tools/check_links.py` vérifie tous les liens ; `python
 - [x] Checklists cochables et décochables (compteur 1/9 → 0/9), bouton « Tout décocher ».
 - [x] Recherche dans les lieux (et produits) et dans le guide des magasins.
 - [x] **Hors ligne réel :** serveur arrêté puis page rechargée. Planning, cases cochées et photos s'affichent depuis le cache du service worker.
-- [x] **Revérification du 24/11/2026 :** programme du dimanche (8 étapes, sans chevauchement, chaque trajet tient dans le battement prévu), 21 marqueurs sur la carte, tracé du dimanche, budget recalculé (45 000 RSD hors costumes en scénario confortable), taux NBS du 19/11. Le dossier `vendor/leaflet` manquait dans la copie en ligne : restauré (sans lui, la carte et le mode hors ligne ne fonctionnaient pas).
+- [x] **Revérification du 24/11/2026 :** programme du dimanche (7 étapes depuis le 24/11 au soir : bagages gardés toute la journée, départ direct d'Ušće vers l'aéroport, sans chevauchement, chaque trajet tient dans le battement prévu), 21 marqueurs sur la carte, tracé du dimanche, budget recalculé (45 000 RSD hors costumes en scénario confortable), taux NBS du 19/11. Le dossier `vendor/leaflet` manquait dans la copie en ligne : restauré (sans lui, la carte et le mode hors ligne ne fonctionnaient pas).
 - [x] Liens externes : 58 URL testées par script ; aucune n'est morte (les quelques codes 403/429 viennent de protections anti-robots).
 
 ## Limites connues

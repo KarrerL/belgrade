@@ -82,7 +82,10 @@
     else status = `En voyage · ${DAY_LABEL[tl.now.startsWith("2026-11-28") ? "sat" : "sun"]} · ${tl.now.slice(11)}`;
 
     const focus = tl.current || tl.next || (tl.phase === "before" ? tl.firstOpen : null);
-    const focusLeg = focus && focus.leg ? legById(focus.leg) : null;
+    const isCurrent = !!(tl.current && focus === tl.current);
+    // Étape en cours : on affiche le départ vers l'étape suivante, pas le trajet déjà fait
+    const goAct = isCurrent ? tl.next : focus;
+    const focusLeg = goAct && goAct.leg ? legById(goAct.leg) : null;
     const focusPlace = focus ? placeById(focus.place) : null;
     let focusHtml = `<p class="muted">Toutes les activités sont terminées.</p>`;
     if (focus) {
@@ -93,7 +96,7 @@
         <h2>${esc(focus.title)}</h2>
         <p class="next-when">${DAY_LABEL[focus.day]} · <strong>${focus.start}–${focus.end}</strong> · ${prioBadge(focus.priority)}</p>
         <p><a class="place-link light" href="#/lieu/${focusPlace.id}">${icon("pin")} ${esc(focusPlace.name)}</a></p>
-        ${focusLeg ? `<p class="next-go">${icon(MODE_ICON[focusLeg.mode])} Partir à <strong>${focusLeg.time}</strong> · ${MODE_LABEL[focusLeg.mode]} · ${esc(focusLeg.duration)}</p>` : ""}
+        ${focusLeg ? `<p class="next-go">${icon(MODE_ICON[focusLeg.mode])} ${isCurrent ? `Ensuite : ${esc(goAct.title)}, partir à` : "Partir à"} <strong>${focusLeg.time}</strong> · ${MODE_LABEL[focusLeg.mode]} · ${esc(focusLeg.duration)}</p>` : ""}
         <div class="actions">
           ${focusLeg && dirUrl(focusLeg.from, focusLeg.to, focusLeg.mode) ? `<a class="btn primary" href="${dirUrl(focusLeg.from, focusLeg.to, focusLeg.mode)}" target="_blank" rel="noopener">${icon("nav")} Itinéraire</a>` : `<a class="btn primary" href="${mapsUrl(focusPlace)}" target="_blank" rel="noopener">${icon("map")} Google Maps</a>`}
           <a class="btn light" href="#/planning?focus=${focus.id}">${icon("calendar")} Détails</a>
