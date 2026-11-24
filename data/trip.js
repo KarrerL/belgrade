@@ -20,6 +20,7 @@ window.TRIP = {
     dates: { start: "2026-11-28", end: "2026-11-29", label: "Sam. 28 – dim. 29 novembre 2026" },
     timezone: "Europe/Belgrade",
     checked: "2026-10-27",
+    rechecked: "2026-11-24",
     travellers: 2,
     diet: "Pas de bœuf, poulet, porc ni dinde. Poisson, œufs et produits laitiers OK.",
     sun: {
@@ -30,11 +31,11 @@ window.TRIP = {
       sources: ["timeanddate"]
     },
     rate: {
-      rsdPerEur: 117.40,
-      date: "2026-10-16",
+      rsdPerEur: 117.6326,
+      date: "2026-11-19",
       status: "confirme",
-      note: "Cours moyen officiel de la Banque nationale de Serbie (NBS) au 16/10/2026, relayé par Kurir Biznis. Le taux varie chaque jour : modifiable dans la page Budget. Les bureaux de change appliquent leur propre taux.",
-      sources: ["kurir_nbs", "nbs"]
+      note: "Cours moyen officiel de la Banque nationale de Serbie (NBS) au 19/11/2026, relayé par Kurir Biznis (117,40 le 16/10 : le dinar est très stable). Le taux varie chaque jour : modifiable dans la page Budget. Les bureaux de change appliquent leur propre taux.",
+      sources: ["kurir_nbs_nov", "kurir_nbs", "nbs"]
     }
   },
 
@@ -58,12 +59,15 @@ window.TRIP = {
   /* Horaires critiques affichés sur l'accueil */
   critical: [
     { day: "sat", time: "11:30", label: "Atterrissage W6 4026", status: "verifier", place: "airport" },
-    { day: "sat", time: "12:35", label: "Arrivée chez Maestro : lancer les retouches tout de suite", status: "estime", place: "maestro" },
-    { day: "sat", time: "16:00", label: "Fermeture probable de Maestro (horaire des commerces voisins)", status: "verifier", place: "maestro" },
+    { day: "sat", time: "12:40", label: "Arrivée chez Maestro : lancer les retouches tout de suite", status: "estime", place: "maestro" },
+    { day: "sat", time: "16:00", label: "Fermeture de Maestro le samedi (09:00–16:00 selon l'annuaire PlanPlus), fermé dimanche", status: "verifier", place: "maestro" },
     { day: "sat", time: "16:01", label: "Coucher du soleil : être au belvédère de Kalemegdan", status: "estime", place: "kalemegdan" },
     { day: "sat", time: "20:00", label: "Table réservée au Pavilion (fermeture annoncée à 22:00)", status: "verifier", place: "pavilion" },
-    { day: "sun", time: "06:40", label: "Taxi de l'hôtel vers Kalenić", status: "estime", place: "hotel" },
-    { day: "sun", time: "12:00", label: "Check-out du Nobel Design Hotel", status: "verifier", place: "hotel" },
+    { day: "sun", time: "06:15", label: "Check-out et bagages laissés à la réception", status: "verifier", place: "hotel" },
+    { day: "sun", time: "06:35", label: "Yandex Go de l'hôtel vers Kalenić", status: "estime", place: "hotel" },
+    { day: "sun", time: "09:20", label: "Yandex Go vers le marché aux puces (ouvert dès 08:00)", status: "confirme", place: "miljakovac" },
+    { day: "sun", time: "11:10", label: "Yandex Go vers Ušće (ouvert 10:00–22:00)", status: "verifier", place: "usce" },
+    { day: "sun", time: "13:50", label: "Quitter Ušće, sans exception, pour l'hôtel", status: "estime", place: "usce" },
     { day: "sun", time: "14:45", label: "Départ pour l'aéroport (15:00 au plus tard)", status: "estime", place: "hotel" },
     { day: "sun", time: "17:40", label: "Décollage JU 252 vers Nice", status: "verifier", place: "airport" }
   ],
@@ -142,6 +146,18 @@ window.TRIP = {
     wiki_plazma: { label: "Wikipedia — Plazma (Bambi, Požarevac)", url: "https://en.wikipedia.org/wiki/Plazma_(biscuit)", checked: "2026-10-27" },
     wiki_eurocrem: { label: "Wikipedia — Eurocrem (Takovo, Gornji Milanovac)", url: "https://en.wikipedia.org/wiki/Eurocrem", checked: "2026-10-27" },
     n021_snacks: { label: "021.rs — histoire de Smoki, Plazma, Bananica", url: "https://www.021.rs/info/srbija/143972/kako-su-nastali-smoki-plazma-bananica-i-rubinov-vinjak", checked: "2026-10-27" },
+    pp_maestro: { label: "PlanPlus — fiche Maestro (Jurija Gagarina 151A/30, horaires)", url: "https://www.planplus.rs/en/maestro-men-s-apparel-and-accessories/92684", checked: "2026-11-24" },
+    wolt_pav: { label: "Wolt — Pavilion Restaurant (carte, horaires de livraison)", url: "https://wolt.com/en/srb/belgrade/restaurant/restoran-paviljon", checked: "2026-11-24" },
+    pp_usce: { label: "PlanPlus — Ušće Shopping Center (10:00–22:00 tous les jours)", url: "https://www.planplus.rs/usce-shopping-center/16016", checked: "2026-11-24" },
+    apt_usce: { label: "Apartmani u Beogradu — Ušće (horaires, enseignes, restaurants)", url: "https://apartmani-u-beogradu.com/en/belgrade-shopping-centers/usce-shopping-center", checked: "2026-11-24" },
+    tob_usce: { label: "Office du tourisme de Belgrade — Ušće Shopping Centre", url: "https://tob.rs/en/what-to-do/shopping-areas/usce-shopping-centre", checked: "2026-11-24" },
+    novosti_buvljak: { label: "Novosti — horaires du 11/11/2026 : « Beogradski buvljak » Miljakovac 08:00–19:00", url: "https://www.novosti.rs/drustvo/vesti/1669587/dan-primirja-drzavni-praznik-radno-vreme-najnovije-vesti", checked: "2026-11-24" },
+    informer_buvljak: { label: "Informer — le Buvljak officiel déménage de Novi Beograd à Miljakovac (2023)", url: "https://informer.rs/srbija/beograd/780835/ovde-ce-biti-smesten-novi-buvljak-i-sta-su-njegove-prednosti-udaljen-je-7-kilometara-a-tu-je-i-bg-voz", checked: "2026-11-24" },
+    wiki_miljakovac: { label: "Wikipedia — Miljakovac (ouverture du Buvljak le 14/12/2023)", url: "https://www.wikipedia.org/wiki/Miljakovac", checked: "2026-11-24" },
+    n1_zemun: { label: "N1 — le marché aux puces informel de Zemun (Vojni put), février 2024", url: "https://n1info.rs/vesti/na-zemunskom-buvljaku-ima-svega-ali-ne-i-mira-za-stanare-obliznjih-kuca/", checked: "2026-11-24" },
+    stillin_flea: { label: "Still in Belgrade — guide des marchés aux puces (2018, mis à jour 2020)", url: "https://stillinbelgrade.com/guide-belgrade-flea-markets", checked: "2026-11-24" },
+    appsavvy_yandex: { label: "App Savvy Traveller — transferts aéroport (Yandex Go ≈ 1 300–2 000 RSD)", url: "https://appsavvytraveller.com/belgrade-airport-transfers/", checked: "2026-11-24" },
+    kurir_nbs_nov: { label: "Kurir Biznis — cours NBS du 19/11/2026 (117,6326)", url: "https://biznis.kurir.rs/amp/10166408/kursna-lista-za-cetvrtak-19-novembar", checked: "2026-11-24" },
     commons: { label: "Wikimedia Commons — photographies sous licence libre", url: "https://commons.wikimedia.org/", checked: "2026-10-27" }
   },
 
@@ -174,8 +190,8 @@ window.TRIP = {
       why: "Camp de base idéal : presque tout le programme se fait à pied depuis l'hôtel.",
       tips: [
         "Hotels.com et Kayak indiquent un check-in à 15:00 et un check-out à 12:00. D'anciennes fiches (« LifeDesign Hotel ») indiquent 14:00 avec early check-in payant (4 920 RSD) : à confirmer avec l'hôtel.",
-        "Écrivez à l'hôtel avant le départ : dépôt des bagages possible le samedi ? garde des bagages le dimanche après le check-out jusqu'à ≈ 14:40 ?",
-        "Demandez un départ tardif (late check-out) le dimanche : nous revenons vers 11:00."
+        "Écrivez à l'hôtel avant le départ : dépôt des bagages possible le samedi ? check-out le dimanche à 06:15 et garde des bagages jusqu'à 14:45 ?",
+        "Le dimanche, nous ne repassons qu'à 14:05 : un départ tardif ne sert que si vous voulez garder la chambre."
       ],
       budget: "Déjà réservé",
       duration: "—",
@@ -185,11 +201,11 @@ window.TRIP = {
     {
       id: "maestro", name: "Maestro — Muška odela Piramida", cat: "shopping", sub: "costumes",
       address: "Jurija Gagarina 151a, TC Piramida (locaux 16, 17 et 30), Novi Beograd", lat: 44.80177, lng: 20.38662, photo: null,
-      hours: "Samedi : non publié par le magasin. Commerces voisins du même centre : 09:00/10:00 → 16:00. Dimanche : fermé (voisins).", status: "verifier",
+      hours: "Lun–ven 09:00–20:00 · sam. 09:00–16:00 · dim. fermé (fiche annuaire PlanPlus de Maestro, non datée ; le site officiel ne publie pas d'horaires)", status: "verifier",
       description: "Fabricant et vendeur serbe de costumes pour homme sous sa propre marque Maestro. Coupes slim, ultra slim, classique, « extended » et grandes tailles ; retouches réalisées sur place.",
       why: "Priorité absolue du voyage : le site officiel annonce un prix unique de 11 800 RSD (≈ 100 €) pour tous les modèles de costume.",
       tips: [
-        "Appelez le 011 2168 032 (+381 11 2168 032) avant le départ pour confirmer l'horaire du samedi 28/11 et demander si une retouche peut être faite le jour même : le magasin est très probablement fermé le dimanche.",
+        "Appelez le 011 2168 032 (+381 11 2168 032) avant le départ pour confirmer l'horaire du samedi 28/11 (09:00–16:00 selon l'annuaire) et demander si une retouche peut être prête avant 16:00 : le magasin est fermé le dimanche.",
         "Le site mentionne aussi l'adresse Jurija Gagarina 153a (locaux 16 et 17) : c'est le même centre TC Piramida. Sur place, cherchez les locaux 16, 17 et 30.",
         "Venez avec la chemise et les chaussures que vous porterez, pour juger longueur de manches et de pantalon.",
         "Faites noter sur la facture le délai et les conditions d'échange.",
@@ -198,16 +214,16 @@ window.TRIP = {
       budget: "Costume : 11 800 RSD (≈ 100 €) — prix officiel du site",
       duration: "1 h 30 – 2 h 15 (essayages + retouches)",
       phone: "+381 11 2168 032", website: "https://muska-odela-piramida.rs/",
-      sources: ["maestro", "maestro_kontakt", "pp_moje", "pp_gazela"]
+      sources: ["maestro", "maestro_kontakt", "pp_maestro", "pp_moje", "pp_gazela"]
     },
     {
       id: "pavilion", name: "Pavilion — Dobračina 39", cat: "restaurant",
       address: "Dobračina 39, 11000 Belgrade (Gornji Dorćol)", lat: 44.82057, lng: 20.46390, photo: null,
-      hours: "Restaurant : 08:00–22:00 tous les jours (annuaire PlanPlus, non daté)", status: "verifier",
+      hours: "08:00–22:00 tous les jours (PlanPlus) ; 08:00–23:00 sur Wolt (horaires de livraison)", status: "verifier",
       description: "« Dobračina 39 » est une adresse, pas un nom de restaurant. Les annuaires et OpenStreetMap y placent un seul établissement : le Pavilion, boutique-hôtel Art déco ouvert en 2020 (≈ 13 chambres) avec restaurant, deux bars, galerie d'art et « social club ». Les annuaires le nomment aussi « Pavilion Boutique Hotel » ou « Pavilion Hotel & Social Club ».",
       why: "C'est l'établissement qui correspond à votre souhait de dîner « à Dobračina 39 » samedi soir. Un annuaire hôtelier décrit une cuisine locale revisitée en version haut de gamme et une scène cocktail.",
       tips: [
-        "Je ne peux pas confirmer la carte, les prix ni l'heure de fermeture de la cuisine : aucune carte en ligne n'a été trouvée.",
+        "La fiche Wolt décrit une cuisine européenne « fusion », des petits-déjeuners (≈ 750–2 400 RSD) et des vins ; les entrées sont servies à partir de 16:00. Je ne peux pas confirmer la carte du soir en salle ni ses prix.",
         "Réservez par téléphone (069 369 6369, soit +381 69 369 6369) et demandez : heure de dernière commande, plats de poisson ou sans viande, ambiance musicale le samedi.",
         "L'annuaire indique une fermeture à 22:00 : arrivée prévue à 20:00 pour dîner sans stress.",
         "Si le restaurant ne sert pas le soir, ou si vous visiez un autre lieu à cette adresse : voir Plans B (Tri šešira à 300 m)."
@@ -215,8 +231,8 @@ window.TRIP = {
       budget: "Non vérifié — prévoir ≈ 4 000–6 000 RSD/pers. (estimation pour un restaurant d'hôtel haut de gamme)",
       duration: "1 h 45",
       phone: "+381 69 369 6369", website: null,
-      food: { cuisine: "Cuisine locale revisitée, version haut de gamme (selon un annuaire hôtelier)", order: ["Demander les plats de poisson du jour", "Entrées végétariennes et fromages"], diet: "Carte inconnue : appelez pour vérifier qu'il existe au moins un plat de poisson ou sans viande.", reservation: "Recommandée : +381 69 369 6369" },
-      sources: ["pp_pavilion", "pp_pavhotel", "expedia_pav", "gsh_pav", "osm"]
+      food: { cuisine: "Cuisine européenne « fusion » et vins (Wolt) ; cuisine locale revisitée selon un annuaire hôtelier", order: ["Demander les plats de poisson du jour", "Entrées végétariennes et fromages"], diet: "Carte inconnue : appelez pour vérifier qu'il existe au moins un plat de poisson ou sans viande.", reservation: "Recommandée : +381 69 369 6369" },
+      sources: ["pp_pavilion", "wolt_pav", "pp_pavhotel", "expedia_pav", "gsh_pav", "osm"]
     },
     {
       id: "kalenic", name: "Marché de Kalenić (Kalenić pijaca)", cat: "market",
@@ -287,7 +303,7 @@ window.TRIP = {
       address: "Gospodar Jevremova 11, Dorćol", lat: 44.82206, lng: 20.45735, photo: "dorcol",
       hours: "Quartier en accès libre ; horaires de visite de la mosquée non vérifiés", status: "verifier",
       description: "Vieux quartier entre Knez Mihailova et le Danube : la mosquée Bajrakli (seule mosquée ottomane encore en activité à Belgrade), les rues Gospodar Jevremova, Cara Dušana et Strahinjića bana, cafés et boutiques.",
-      why: "Ambiance de quartier vivant le dimanche, entre ville historique et cafés modernes.",
+      why: "Hors programme depuis l'ajout du marché aux puces et d'Ušće. À voir en passant samedi soir si vous avez de l'énergie (10 min depuis Knez Mihailova).",
       tips: ["Mosquée : voir de l'extérieur, entrer seulement si c'est ouvert et en dehors des prières.", "Tenue couvrant épaules et genoux."],
       budget: "Gratuit (+ café)", duration: "1 h – 1 h 15",
       phone: null, website: null, sources: ["commons", "osm"]
@@ -341,7 +357,7 @@ window.TRIP = {
       address: "Dositejeva 9a, Stari Grad", lat: 44.81793, lng: 20.46166, photo: null,
       hours: "Horaires non trouvés ; une source mentionne des concerts le samedi et le dimanche midi", status: "verifier",
       description: "Restaurant au décor de théâtre (loges d'opéra), carte courte ; le saumon est souvent cité par les avis.",
-      why: "Déjeuner du dimanche à 10 min de l'hôtel, différent d'une kafana traditionnelle, avec au moins un plat de poisson signalé.",
+      why: "Hors programme depuis que le dimanche midi est consacré à Ušće. Plan B à 10 min de l'hôtel, avec au moins un plat de poisson signalé.",
       tips: ["Réservez (+381 11 3288 995) et vérifiez l'ouverture du dimanche midi.", "Carte et prix actuels non vérifiés."],
       budget: "≈ 2 000–3 500 RSD/pers. (estimation)",
       duration: "1 h 15",
@@ -409,15 +425,38 @@ window.TRIP = {
       phone: null, website: "https://www.bgpijace.rs/", sources: ["bgpijace"]
     },
     {
-      id: "miljakovac", name: "Buvljak Miljakovac (marché aux puces)", cat: "market",
-      address: "Vareška, Rakovica (≈ 7 km au sud du centre)", lat: 44.75019, lng: 20.44808, photo: null,
-      hours: "08:00–19:00, fermé le lundi (site officiel Beogradske pijace)", status: "confirme",
-      description: "Le grand marché aux puces officiel de Belgrade (« Beogradski buvljak »), géré par la société municipale des marchés.",
-      why: "Le seul véritable marché aux puces dont l'ouverture le dimanche est confirmée par une source officielle. Non retenu : 20–25 min de taxi dans chaque sens, il ferait perdre Saint-Sava et Dorćol.",
-      tips: ["Plan B uniquement, si les stands d'occasion de Kalenić sont absents et que la brocante prime sur le reste."],
-      budget: "Taxi ≈ 1 000–1 500 RSD par trajet (estimation)", duration: "1 h + 50 min de trajets",
+      id: "miljakovac", name: "Beogradski buvljak — marché aux puces (Miljakovac)", cat: "market",
+      address: "OTC Miljakovac, Vareška bb, Rakovica (≈ 7 km au sud du centre)", lat: 44.75019, lng: 20.44808, photo: null,
+      hours: "08:00–19:00, fermé le lundi (site officiel Beogradske pijace) ; ouvert 08:00–19:00 le 11/11/2026 selon Novosti", status: "confirme",
+      description: "Le marché aux puces officiel de Belgrade, « Beogradski buvljak ». Il a quitté la rue Jurija Gagarina à Novi Beograd pour un site neuf à Miljakovac, ouvert le 14/12/2023 : ≈ 230 étals (en partie couverts), plus de 60 boutiques, parking.",
+      why: "C'est « le » marché aux puces de Belgrade, géré par la société municipale des marchés, et son ouverture le dimanche dès 08:00 est confirmée. Je ne peux pas confirmer la part d'objets anciens par rapport aux articles neufs bon marché.",
+      tips: [
+        "Prenez des espèces en petites coupures et négociez : c'est l'usage dans les marchés aux puces.",
+        "Gardez sac et téléphone devant vous dans la foule.",
+        "Alternative non retenue : le marché aux puces informel de Zemun (Vojni put), le dimanche vers 06:00–10:00 selon un guide local. Adresse exacte et horaires non vérifiés, et il tombe en même temps que Kalenić.",
+        "Achats encombrants : pensez au poids des bagages pour le vol."
+      ],
+      budget: "Achats : 1 000–5 000 RSD (estimation) · Yandex Go ≈ 800–1 200 RSD par trajet (estimation)", duration: "1 h 30",
       phone: "+381 11 7857 940", website: "https://www.bgpijace.rs/",
-      sources: ["bgpijace_hours"]
+      sources: ["bgpijace_hours", "novosti_buvljak", "informer_buvljak", "wiki_miljakovac", "n1_zemun", "stillin_flea"]
+    },
+    {
+      id: "usce", name: "Ušće Shopping Center", cat: "shopping", sub: "centre commercial",
+      address: "Bulevar Mihajla Pupina 4, Novi Beograd", lat: 44.81562, lng: 20.43702, photo: null,
+      hours: "10:00–22:00 tous les jours (PlanPlus et un guide local concordants)", status: "verifier",
+      description: "Grand centre commercial de Novi Beograd au pied de la tour Ušće, près du confluent de la Save et du Danube : plus de 150 boutiques d'enseignes internationales et régionales, électronique, beauté, maison, sport, restaurants (dont Fish & Bar et Vapiano selon un guide) et multiplexe Cineplexx.",
+      why: "Demandé pour le dimanche. Il remplace le déjeuner assis : on y mange sur le pouce. Le parc d'Ušće voisin offre une vue sur la forteresse de Kalemegdan.",
+      tips: [
+        "Je ne peux pas confirmer la présence d'un supermarché, de Lilly ou de dm dans le centre : regardez le plan à l'entrée.",
+        "Beaucoup d'enseignes sont les mêmes qu'en France (Zara, etc.) : visez les marques serbes et régionales.",
+        "Pour manger : Fish & Bar est cité par un guide (poisson, à vérifier sur place).",
+        "Quittez le centre à 13:50 au plus tard : bagages à l'hôtel, puis l'aéroport.",
+        "Téléphone public : +381 11 285 4505."
+      ],
+      budget: "En-cas ≈ 800–1 500 RSD/pers. (estimation) + achats",
+      duration: "2 h 15",
+      phone: "+381 11 285 4505", website: null,
+      sources: ["pp_usce", "apt_usce", "tob_usce"]
     },
     {
       id: "gigatron", name: "Gigatron (électronique)", cat: "shopping", sub: "electronique",
@@ -438,10 +477,10 @@ window.TRIP = {
   legs: [
     {
       id: "L1", day: "sat", time: "12:10", from: "airport", to: "maestro", mode: "taxi",
-      duration: "20–30 min", distance: "≈ 7 km à vol d'oiseau", price: "Prix affiché dans Yandex Go avant de valider (estimation ≈ 2 500–3 500 RSD, ordre de grandeur des taxis aéroport)", status: "verifier",
+      duration: "20–30 min", distance: "≈ 7 km à vol d'oiseau", price: "Prix affiché dans Yandex Go avant de valider (≈ 1 300–2 000 RSD vers le centre selon un guide 2026 ; Piramida est un peu plus proche)", status: "verifier",
       instructions: "Yandex Go : destination « TC Piramida, Jurija Gagarina 151a, Novi Beograd ». Commandez une fois sortis avec les bagages, suivez le point de prise en charge indiqué dans l'appli et vérifiez la plaque. Le point de rendez-vous exact à l'aéroport n'est pas vérifié.",
       alternative: "Si l'appli ne trouve pas de voiture : bon de taxi à prix fixe au kiosque du hall des arrivées (payable en dinars). Le bus 72 (gratuit) va vers Zeleni venac et ne passe pas par Piramida : non recommandé avec les bagages et Maestro à l'horaire réduit.",
-      sources: ["ats_beg", "eaa_transport"]
+      sources: ["appsavvy_yandex", "ats_beg", "eaa_transport"]
     },
     {
       id: "L2", day: "sat", time: "14:45", from: "maestro", to: "hotel", mode: "taxi",
@@ -465,7 +504,7 @@ window.TRIP = {
       sources: []
     },
     {
-      id: "L5", day: "sat", time: "18:00", from: "znak", to: "lilly", mode: "walk",
+      id: "L5", day: "sat", time: "18:05", from: "znak", to: "lilly", mode: "walk",
       duration: "4 min", distance: "≈ 0,3 km", price: "Gratuit", status: "estime",
       instructions: "Remontez Kralja Petra jusqu'à Knez Mihailova, puis à droite jusqu'au n° 47.",
       alternative: "—", sources: []
@@ -491,43 +530,45 @@ window.TRIP = {
       sources: []
     },
     {
-      id: "L9", day: "sun", time: "06:40", from: "hotel", to: "kalenic", mode: "taxi",
-      duration: "7–10 min", distance: "≈ 2,4 km", price: "≈ 600–800 RSD (estimation)", status: "estime",
-      instructions: "Yandex Go commandé depuis la chambre à 06:35. Adresse : « Kalenić pijaca, Maksima Gorkog ».",
+      id: "L9", day: "sun", time: "06:35", from: "hotel", to: "kalenic", mode: "taxi",
+      duration: "7–10 min", distance: "≈ 2,4 km", price: "≈ 500–800 RSD (estimation)", status: "estime",
+      instructions: "Yandex Go commandé à la réception après le check-out. Adresse : « Kalenić pijaca, Maksima Gorkog ».",
       alternative: "À pied, 30 min (Terazije → Kralja Milana → Slavija → Njegoševa) : il fait encore nuit (lever du soleil 06:52).",
       sources: []
     },
     {
-      id: "L10", day: "sun", time: "09:20", from: "kalenic", to: "sava", mode: "walk",
+      id: "L10", day: "sun", time: "08:40", from: "kalenic", to: "sava", mode: "walk",
       duration: "9 min", distance: "≈ 0,6 km", price: "Gratuit", status: "estime",
       instructions: "Depuis le marché, rejoignez la rue Njegoševa puis le parc du Temple (le dôme est visible).",
-      alternative: "—", sources: []
+      alternative: "Si vous êtes en retard : commandez directement le Yandex Go vers le marché aux puces depuis Kalenić.", sources: []
     },
     {
-      id: "L11", day: "sun", time: "10:30", from: "sava", to: "hotel", mode: "walk",
-      duration: "30 min", distance: "≈ 2,2 km", price: "Gratuit", status: "estime",
-      instructions: "Parvis du Temple → place Slavija → rue Kralja Milana (en descente, commerces en route) → Terazije → hôtel. Check-out avant 12:00 et dépôt des bagages à la réception.",
-      alternative: "Yandex Go depuis le parvis, rue Krušedolska (8–12 min, ≈ 600–800 RSD estimés) en cas de pluie ou de fatigue.",
+      id: "L11", day: "sun", time: "09:20", from: "sava", to: "miljakovac", mode: "taxi",
+      duration: "15–20 min", distance: "≈ 5,5 km à vol d'oiseau", price: "≈ 800–1 200 RSD (estimation)", status: "estime",
+      instructions: "Yandex Go depuis le parvis (rue Krušedolska). Destination : « OTC Miljakovac – Beogradski buvljak, Vareška ».",
+      alternative: "CarGo. Le site est aussi desservi par le train urbain BG voz (arrêt à 150 m selon Informer), mais je n'ai pas vérifié l'horaire du dimanche.",
+      sources: ["informer_buvljak"]
+    },
+    {
+      id: "L12", day: "sun", time: "11:10", from: "miljakovac", to: "usce", mode: "taxi",
+      duration: "20–25 min", distance: "≈ 7,5 km à vol d'oiseau", price: "≈ 1 000–1 400 RSD (estimation)", status: "estime",
+      instructions: "Yandex Go depuis l'entrée du marché. Destination : « Ušće Shopping Center, Bulevar Mihajla Pupina 4 ».",
+      alternative: "CarGo. Si le trafic est dense, l'appli affiche la durée : raccourcissez Ušće plutôt que le temps prévu à l'hôtel.",
       sources: []
     },
     {
-      id: "L12", day: "sun", time: "11:25", from: "hotel", to: "dorcol", mode: "walk",
-      duration: "18 min", distance: "≈ 1,6 km", price: "Gratuit", status: "estime",
-      instructions: "Hôtel → place de la République → Knez Mihailova → à droite rue Gospodar Jevremova jusqu'à la mosquée Bajrakli.",
-      alternative: "—", sources: []
-    },
-    {
-      id: "L13", day: "sun", time: "12:35", from: "dorcol", to: "littlebay", mode: "walk",
-      duration: "10 min", distance: "≈ 0,7 km", price: "Gratuit", status: "estime",
-      instructions: "Gospodar Jevremova → Dositejeva vers l'est jusqu'au 9a.",
-      alternative: "—", sources: []
+      id: "L13", day: "sun", time: "13:50", from: "usce", to: "hotel", mode: "taxi",
+      duration: "10–15 min", distance: "≈ 2 km (pont Brankov most)", price: "≈ 500–800 RSD (estimation)", status: "estime",
+      instructions: "Yandex Go depuis l'entrée principale d'Ušće, côté Bulevar Mihajla Pupina.",
+      alternative: "À pied par le pont Brankov most, ≈ 30 min : seulement si aucune voiture n'est disponible avant 14:00.",
+      sources: []
     },
     {
       id: "L14", day: "sun", time: "14:45", from: "hotel", to: "airport", mode: "taxi",
-      duration: "25–35 min (prévoir 45 min si trafic)", distance: "≈ 12,5 km à vol d'oiseau", price: "≈ 3 000–3 500 RSD (estimation ; prix exact affiché dans Yandex Go)", status: "estime",
+      duration: "25–35 min (prévoir 45 min si trafic)", distance: "≈ 12,5 km à vol d'oiseau", price: "≈ 1 300–2 000 RSD selon un guide 2026 (prix exact affiché dans Yandex Go)", status: "verifier",
       instructions: "Commandez un Yandex Go à 14:35 depuis la réception (prix affiché avant validation). Départ au plus tard à 15:00.",
       alternative: "Taxi commandé par la réception, ou CarGo. En dernier recours, bus A1 (minibus vers l'aéroport depuis Slavija, ≈ 400 RSD en espèces en 2024, 30–40 min) ou bus 72 gratuit depuis Zeleni venac (plus lent, toutes les 30 min environ) : seulement si aucun taxi n'est disponible, avec départ avancé à 14:15.",
-      sources: ["eaa_transport", "nomadic_72", "wiki_transport"]
+      sources: ["appsavvy_yandex", "eaa_transport", "nomadic_72", "wiki_transport"]
     }
   ],
 
@@ -546,19 +587,19 @@ window.TRIP = {
       booking: null
     },
     {
-      id: "sat-maestro", day: "sat", start: "12:35", end: "14:45", place: "maestro", priority: "imperatif",
+      id: "sat-maestro", day: "sat", start: "12:40", end: "14:45", place: "maestro", priority: "imperatif",
       title: "Costumes chez Maestro (TC Piramida)",
       desc: "Essayages sans se presser, choix du ou des costumes, chemises et accessoires, retouches sur place. C'est la contrainte horaire du voyage : le magasin est probablement fermé le dimanche et ferme tôt le samedi (≈ 16:00 chez les voisins).",
       leg: "L1", budget: "11 800 RSD par costume (≈ 100 €)",
       tips: [
         "Dès l'arrivée, demandez l'heure de fermeture et le délai des retouches, puis lancez les retouches avant de choisir les accessoires.",
         "Si les retouches ne peuvent pas être prêtes avant la fermeture : voir Plans B (retouche en France).",
-        "Grignotez à l'aéroport ou dans le centre commercial : le vrai repas est à 16:55."
+        "Grignotez à l'aéroport ou dans le centre commercial : le vrai repas est à 17:00."
       ],
       booking: "Appeler +381 11 2168 032 avant le départ pour confirmer l'horaire du samedi 28/11"
     },
     {
-      id: "sat-hotel", day: "sat", start: "15:05", end: "15:30", place: "hotel", priority: "imperatif",
+      id: "sat-hotel", day: "sat", start: "15:10", end: "15:30", place: "hotel", priority: "imperatif",
       title: "Check-in au Nobel Design Hotel",
       desc: "Check-in annoncé à partir de 15:00 : dépôt des bagages et des costumes. Demandez la garde des bagages pour dimanche.",
       leg: "L2", budget: "—",
@@ -574,7 +615,7 @@ window.TRIP = {
       booking: null
     },
     {
-      id: "sat-znak", day: "sat", start: "16:55", end: "18:05", place: "znak", priority: "recommande",
+      id: "sat-znak", day: "sat", start: "17:00", end: "18:05", place: "znak", priority: "recommande",
       title: "Repas tardif à la kafana « ? »",
       desc: "Cuisine serbe dans la plus ancienne kafana de la ville, par Kosančićev venac. Repas léger pour garder de l'appétit pour 20:00.",
       leg: "L4", budget: "≈ 2 000–3 000 RSD/pers. (estimation)",
@@ -582,7 +623,7 @@ window.TRIP = {
       booking: null, dropOrder: 3
     },
     {
-      id: "sat-shopping", day: "sat", start: "18:05", end: "19:15", place: "lilly", priority: "recommande",
+      id: "sat-shopping", day: "sat", start: "18:10", end: "19:15", place: "lilly", priority: "recommande",
       title: "Shopping : Lilly, supermarché et Design District",
       desc: "Droguerie Lilly (ouverte jusqu'à 22:00), puis le supermarché le plus proche (Maxi, IDEA ou Univerexport) pour les snacks serbes, puis le Design District si ouvert. Snacks : c'est le bon moment, car les horaires du dimanche ne sont pas vérifiés.",
       leg: "L5", budget: "Snacks 2 000–4 000 RSD ; droguerie 1 000–3 000 RSD (estimations)",
@@ -604,70 +645,71 @@ window.TRIP = {
       leg: "L8", budget: "—", tips: ["Sac cabas et espèces pour Kalenić."], booking: null
     },
     {
-      id: "sun-kalenic", day: "sun", start: "06:50", end: "08:45", place: "kalenic", priority: "imperatif",
+      id: "sun-checkout", day: "sun", start: "06:15", end: "06:35", place: "hotel", priority: "imperatif",
+      title: "Check-out et bagages à la réception",
+      desc: "Nous ne repassons à l'hôtel qu'à 14:05, après l'heure de check-out (12:00) : check-out dès le matin, bagages laissés à la réception jusqu'à 14:45.",
+      leg: null, budget: "—",
+      tips: ["Gardez sur vous passeports, chargeur et un sac cabas vide pour les achats.", "Costumes déjà rangés dans la housse."],
+      booking: "Garde des bagages de 06:15 à 14:45 (à confirmer avec l'hôtel)"
+    },
+    {
+      id: "sun-kalenic", day: "sun", start: "06:45", end: "08:15", place: "kalenic", priority: "imperatif",
       title: "Marché de Kalenić",
       desc: "Arrivée juste avant le lever du soleil (06:52), quand les vendeurs s'installent. Tour complet : halle et étals de fromages et kajmak (dégustation), fruits et légumes d'hiver, conserves (ajvar, turšija), miel, puis la périphérie pour les éventuels stands d'occasion.",
       leg: "L9", budget: "1 500–4 000 RSD (estimation)",
       tips: [
         "Ordre conseillé : 1) produits laitiers (dégustation) ; 2) conserves et ajvar en bocaux fermés ; 3) miel et fruits secs ; 4) périphérie et artisanat.",
         "Espèces en petites coupures ; les vendeurs proposent souvent de goûter.",
-        "Fromage et kajmak : à consommer sur place, interdits à l'importation dans l'UE."
+        "Fromage et kajmak : à consommer sur place, interdits à l'importation dans l'UE.",
+        "Vous porterez vos achats jusqu'à 14:05 : gardez les bocaux et achats lourds pour la fin de la visite."
       ],
       booking: null
     },
     {
-      id: "sun-breakfast", day: "sun", start: "08:45", end: "09:20", place: "kalenic", priority: "recommande",
+      id: "sun-breakfast", day: "sun", start: "08:15", end: "08:40", place: "kalenic", priority: "recommande",
       title: "Petit-déjeuner dans une boulangerie du marché",
-      desc: "Burek sa sirom et yaourt, ou pâtisserie, dans l'une des boulangeries qui bordent le marché (aucune adresse précise vérifiée).",
+      desc: "Burek sa sirom et yaourt, ou pâtisserie, dans l'une des boulangeries qui bordent le marché (aucune adresse précise vérifiée). C'est le dernier vrai repas avant l'avion : mangez bien.",
       leg: null, budget: "≈ 300–600 RSD/pers. (estimation)",
       tips: ["⚠ Burek : la garniture « sir » est du fromage, mais la pâte peut contenir du saindoux. Demandez « bez masti? »."],
       booking: null
     },
     {
-      id: "sun-sava", day: "sun", start: "09:30", end: "10:30", place: "sava", priority: "recommande",
-      title: "Temple de Saint-Sava",
-      desc: "Extérieur, nef et mosaïque du Pantocrator pendant la liturgie dominicale (attitude discrète), puis la crypte si elle est accessible.",
+      id: "sun-sava", day: "sun", start: "08:50", end: "09:20", place: "sava", priority: "facultatif",
+      title: "Temple de Saint-Sava (visite courte)",
+      desc: "Extérieur et nef avec la mosaïque du Pantocrator. Le dimanche matin a lieu la liturgie : attitude discrète.",
       leg: "L10", budget: "Gratuit",
-      tips: ["Épaules et genoux couverts.", "Pas de visite guidée pendant l'office."],
-      booking: null, dropOrder: 2
-    },
-    {
-      id: "sun-checkout", day: "sun", start: "11:00", end: "11:25", place: "hotel", priority: "imperatif",
-      title: "Check-out et bagages en consigne",
-      desc: "Check-out avant 12:00 et rangement des achats du marché (bocaux en soute, bien emballés). Bagages laissés à la réception.",
-      leg: "L11", budget: "—",
-      tips: ["Emballez les bocaux dans des vêtements, dans des sacs zip.", "Réglez Yandex Go sur l'aéroport pour 14:35."],
-      booking: "Garde des bagages jusqu'à 14:45 (à confirmer)"
-    },
-    {
-      id: "sun-dorcol", day: "sun", start: "11:45", end: "12:35", place: "dorcol", priority: "facultatif",
-      title: "Flânerie à Dorćol",
-      desc: "Mosquée Bajrakli, rues Gospodar Jevremova, Cara Dušana et Strahinjića bana : cafés, petites boutiques, rues résidentielles. Pause café.",
-      leg: "L12", budget: "Café ≈ 300–500 RSD/pers. (estimation)",
-      tips: ["Passez par Lilly (Knez Mihailova, ouverte le dimanche) pour les achats oubliés."],
+      tips: ["Épaules et genoux couverts.", "En cas de retard, sautez cette étape."],
       booking: null, dropOrder: 1
     },
     {
-      id: "sun-lunch", day: "sun", start: "12:45", end: "14:00", place: "littlebay", priority: "recommande",
-      title: "Déjeuner au Little Bay",
-      desc: "Dernier repas assis, à 10 min de l'hôtel.",
-      leg: "L13", budget: "≈ 2 000–3 500 RSD/pers. (estimation)",
-      tips: ["Plan B : Tri šešira (ouvert à partir de 11:00) ou la kafana « ? »."],
-      booking: "Réserver le dimanche midi au +381 11 3288 995"
+      id: "sun-buvljak", day: "sun", start: "09:40", end: "11:10", place: "miljakovac", priority: "imperatif",
+      title: "Marché aux puces de Belgrade (Beogradski buvljak)",
+      desc: "Le marché aux puces officiel de la ville, à Miljakovac : objets, vêtements, outils, curiosités. Flânez, comparez, négociez.",
+      leg: "L11", budget: "1 000–5 000 RSD (estimation)",
+      tips: ["Espèces et négociation.", "Pensez à la place dans les valises.", "Commandez le Yandex Go pour Ušće à 11:05."],
+      booking: null
     },
     {
-      id: "sun-last", day: "sun", start: "14:00", end: "14:40", place: "design", priority: "facultatif",
-      title: "Derniers achats près de l'hôtel",
-      desc: "Design District ou dernier passage en droguerie, puis récupération des bagages à 14:35.",
-      leg: null, budget: "Selon la liste d'achats",
-      tips: ["Arrêtez tout achat à 14:30, sans exception."],
-      booking: null, dropOrder: 1
+      id: "sun-usce", day: "sun", start: "11:35", end: "13:50", place: "usce", priority: "imperatif",
+      title: "Ušće Shopping Center (avec un en-cas sur place)",
+      desc: "Shopping à Novi Beograd, sans repas assis : un en-cas dans le centre. Si le temps le permet, sortez quelques minutes dans le parc d'Ušće pour la vue sur Kalemegdan.",
+      leg: "L12", budget: "En-cas ≈ 800–1 500 RSD/pers. (estimation) + achats",
+      tips: ["Consultez d'abord le plan du centre pour cibler les marques serbes et régionales.", "Départ à 13:50 au plus tard."],
+      booking: null
+    },
+    {
+      id: "sun-bags", day: "sun", start: "14:05", end: "14:40", place: "hotel", priority: "imperatif",
+      title: "Retour à l'hôtel : bagages et rangement",
+      desc: "Récupération des bagages, rangement des achats (bocaux en soute, bien emballés), dernière vérification.",
+      leg: "L13", budget: "—",
+      tips: ["Emballez les bocaux dans des vêtements, dans des sacs zip.", "Commandez le Yandex Go pour l'aéroport à 14:35."],
+      booking: null
     },
     {
       id: "sun-airport", day: "sun", start: "14:45", end: "15:20", place: "airport", priority: "imperatif",
       title: "Départ pour l'aéroport",
       desc: "Yandex Go de l'hôtel vers l'aéroport Nikola Tesla. Départ au plus tard à 15:00. Vol Air Serbia JU 252 à 17:40, arrivée à Nice à 19:45.",
-      leg: "L14", budget: "≈ 3 000–3 500 RSD (estimation)",
+      leg: "L14", budget: "≈ 1 300–2 000 RSD (selon un guide 2026)",
       tips: ["Dépensez ou changez vos derniers dinars avant le contrôle.", "Le contrôle des passeports à la sortie peut prendre du temps."],
       booking: "Yandex Go commandé à 14:35 (sinon taxi par la réception)"
     }
@@ -705,6 +747,12 @@ window.TRIP = {
       ]
     },
     {
+      id: "centres", name: "Centres commerciaux", icon: "store",
+      items: [
+        { place: "usce", products: "Mode, beauté, électronique, maison, sport ; restaurants", why: "Demandé ; plus de 150 boutiques, ouvert le dimanche", proximity: "Dimanche 11:35–13:50" }
+      ]
+    },
+    {
       id: "electronique", name: "Électronique et gadgets", icon: "plug",
       items: [
         { place: "gigatron", products: "Électronique grand public", why: "Aucun avantage de prix démontré par rapport à la France : pas de détour conseillé", proximity: "Hors itinéraire" }
@@ -721,7 +769,7 @@ window.TRIP = {
       id: "vintage", name: "Brocante et vintage", icon: "clock",
       items: [
         { place: "kalenic", products: "Stands d'occasion signalés en périphérie du marché", why: "Présence le 29/11 non confirmée", proximity: "Dimanche matin" },
-        { place: "miljakovac", products: "Vrai marché aux puces : objets, vêtements, outils, antiquités", why: "Ouvert le dimanche (source officielle), mais excentré", proximity: "Plan B (≈ 25 min de taxi)" }
+        { place: "miljakovac", products: "Le marché aux puces officiel : objets, vêtements, outils, curiosités", why: "Ouvert le dimanche dès 08:00 (source officielle)", proximity: "Dimanche 09:40–11:10" }
       ]
     },
     {
@@ -776,8 +824,8 @@ window.TRIP = {
   budget: {
     note: "Montants estimés pour 2 personnes, hors vols et hôtel. Seul le prix d'un costume Maestro (11 800 RSD) provient d'une source officielle ; tout le reste est une estimation. Aucun montant n'est un tarif imposé.",
     categories: [
-      { id: "transports", name: "Transports", essential: true, scenarios: { eco: 7500, confort: 10000, genereux: 12000 }, basis: "Taxi aéroport ≈ 3 500 ×2, trajets en ville (Piramida, Kalenić, Saint-Sava)" },
-      { id: "repas", name: "Repas", essential: true, scenarios: { eco: 12000, confort: 20000, genereux: 28000 }, basis: "Kafana « ? », Pavilion, Little Bay, boulangerie" },
+      { id: "transports", name: "Transports", essential: true, scenarios: { eco: 7000, confort: 9000, genereux: 11000 }, basis: "7 courses Yandex Go : aéroport ×2 (≈ 1 300–2 000), Piramida, Kalenić, marché aux puces, Ušće, hôtel" },
+      { id: "repas", name: "Repas", essential: true, scenarios: { eco: 10000, confort: 16000, genereux: 22000 }, basis: "Kafana « ? », Pavilion, boulangerie, en-cas à Ušće" },
       { id: "cafes", name: "Cafés", essential: false, scenarios: { eco: 1500, confort: 3000, genereux: 5000 }, basis: "≈ 300–500 RSD le café (estimation)" },
       { id: "visites", name: "Visites", essential: false, scenarios: { eco: 0, confort: 0, genereux: 2400 }, basis: "Sites gratuits ; option visite guidée de Saint-Sava 10 €/pers." },
       { id: "snacks", name: "Snacks", essential: false, scenarios: { eco: 2000, confort: 4000, genereux: 7000 }, basis: "Achats en supermarché et au marché" },
@@ -798,8 +846,8 @@ window.TRIP = {
   checklists: [
     { id: "avant", name: "Avant le départ", items: [
       "Passeports valides (la Serbie est hors UE et hors Schengen)",
-      "Appeler Maestro (+381 11 2168 032) : horaire du sam. 28/11, retouches le jour même",
-      "E-mail à l'hôtel : check-in, garde des bagages sam. et dim., départ tardif",
+      "Appeler Maestro (+381 11 2168 032) : confirmer 09:00–16:00 le sam. 28/11 et des retouches prêtes avant 16:00",
+      "E-mail à l'hôtel : check-in samedi, check-out dimanche à 06:15 et garde des bagages jusqu'à 14:45",
       "Installer Yandex Go (moyen principal), vérifier le mode de paiement proposé (carte ou espèces) ; CarGo en secours",
       "Télécharger la carte hors ligne de Belgrade dans Google Maps",
       "Ouvrir ce site une fois en ligne sur le téléphone (mise en cache) et l'ajouter à l'écran d'accueil",
@@ -809,7 +857,6 @@ window.TRIP = {
     ]},
     { id: "resa", name: "Réservations", items: [
       "Dîner au Pavilion (Dobračina 39) sam. 20:00, au +381 69 369 6369",
-      "Déjeuner au Little Bay dim. 12:45, au +381 11 3288 995",
       "Yandex Go dim. 14:35 vers l'aéroport (plan B : taxi par la réception)",
       "Check-in en ligne Wizz Air (aller)",
       "Check-in en ligne Air Serbia (retour)"
@@ -843,6 +890,7 @@ window.TRIP = {
       "Costumes dans la housse, en cabine",
       "Poids des bagages contrôlé",
       "Rien oublié dans la chambre ni à la consigne",
+      "Départ d'Ušće à 13:50 au plus tard",
       "Derniers dinars dépensés",
       "Départ de l'hôtel au plus tard à 15:00"
     ]}
@@ -858,18 +906,18 @@ window.TRIP = {
       drop: "1) Repas à la kafana « ? » (remplacé par un en-cas) ; 2) shopping du samedi soir, reporté au dimanche ; 3) Kalemegdan raccourci (belvédère seulement, même de nuit)." },
     { id: "b-maestro-shop", title: "Maestro fermé ou introuvable", icon: "store",
       action: "Locaux 16, 17 et 30 du TC Piramida (aussi indiqué au 153a). Demandez « Maestro odela » à l'accueil ou appelez. S'il est fermé : le même immeuble abrite d'autres boutiques de costumes (Moje odelo, Loensee), selon les annuaires.",
-      keep: "L'objectif costume.", drop: "Rien d'autre : reportez la visite de Kalemegdan au dimanche à 11:30, à la place de Dorćol." },
+      keep: "L'objectif costume.", drop: "Kalemegdan raccourci au belvédère, même de nuit ; le dimanche, la vue sur la forteresse depuis le parc d'Ušće compense." },
     { id: "b-retouche", title: "Retouches impossibles à temps", icon: "scissors",
       action: "Le magasin est probablement fermé dimanche : achetez sans retouche si la taille convient, et faites faire ourlets et manches par un retoucheur en France (gardez la facture). Pour une petite retouche, demandez si elle peut être prête avant la fermeture.",
       keep: "L'achat.", drop: "Retarder le départ du magasin, quitte à arriver à Kalemegdan à la nuit (vue nocturne, toujours belle)." },
     { id: "b-weather", title: "Pluie ou grand froid", icon: "rain",
       action: "Yandex Go pour les trajets à pied de plus de 15 min. Kalemegdan raccourci au belvédère. Davantage de temps à l'intérieur : kafana, Lilly, Design District, et l'intérieur de Saint-Sava.",
-      keep: "Marché (la halle et une partie des étals sont couverts), Saint-Sava.", drop: "Dorćol." },
-    { id: "b-flea", title: "Pas de brocante à Kalenić", icon: "clock",
-      action: "Profitez pleinement du marché alimentaire. Si la brocante est vraiment prioritaire : taxi vers Buvljak Miljakovac (ouvert dès 08:00 le dimanche selon le site officiel), environ 25 min, puis retour à l'hôtel avant 11:45.",
-      keep: "Kalenić.", drop: "Saint-Sava, puis Dorćol, si vous choisissez Miljakovac." },
+      keep: "Kalenić, le marché aux puces (une partie des étals est couverte) et Ušće (intérieur).", drop: "Saint-Sava, puis la promenade dans le parc d'Ušće." },
+    { id: "b-flea", title: "Marché aux puces décevant, fermé ou en retard", icon: "clock",
+      action: "S'il est fermé (jour férié imprévu) ou décevant : allez directement à Ušće, qui ouvre à 10:00. Les stands d'occasion de Kalenić sont l'autre chance de brocante. Le marché informel de Zemun (dimanche tôt, ≈ 06:00–10:00 selon un guide) n'est pas compatible avec Kalenić.",
+      keep: "Kalenić, Ušće et la marge de l'aéroport.", drop: "Saint-Sava, puis du temps au marché aux puces." },
     { id: "b-restaurant", title: "Restaurant complet ou fermé", icon: "fork",
-      action: "Samedi : Tri šešira (Skadarska 29, à 300 m, ouvert jusqu'à 22:30 selon Wolt), ou les autres kafanas de Skadarlija. Dimanche : Tri šešira ou la kafana « ? ».",
+      action: "Samedi : Tri šešira (Skadarska 29, à 300 m, ouvert jusqu'à 22:30 selon Wolt), ou les autres kafanas de Skadarlija. Dimanche : pas de repas assis prévu ; en-cas à Ušće.",
       keep: "Un vrai repas serbe.", drop: "—" },
     { id: "b-museum", title: "Saint-Sava inaccessible (office, événement)", icon: "church",
       action: "Admirez l'extérieur et le parvis, puis revenez plus tôt à l'hôtel. La crypte n'est pas garantie le dimanche.",
@@ -878,7 +926,7 @@ window.TRIP = {
       action: "Si Yandex Go ne trouve pas de voiture ou ne fonctionne pas : CarGo. Sinon faites appeler un taxi par l'hôtel ou le restaurant. À l'aéroport : le kiosque des bons de taxi. Transports publics gratuits depuis le 01/01/2025 ; bus 72 vers l'aéroport depuis Zeleni venac. N'utilisez pas Uber : il ne fonctionne pas en Serbie.",
       keep: "La marge de l'aéroport.", drop: "—" },
     { id: "b-traffic", title: "Trafic important vers l'aéroport", icon: "car",
-      action: "Commandez le Yandex Go à 14:20 (l'appli indique la durée avec le trafic) : le shopping s'arrête à 14:15. Départ de l'hôtel à 15:00 au plus tard dans tous les cas.",
+      action: "Quittez Ušće à 13:30 au lieu de 13:50 et commandez le Yandex Go pour l'aéroport à 14:20 (l'appli indique la durée avec le trafic). Départ de l'hôtel à 15:00 au plus tard dans tous les cas.",
       keep: "Le vol.", drop: "Derniers achats, puis café." },
     { id: "b-bags", title: "Trop d'achats pour les bagages", icon: "bag",
       action: "Achetez un sac pliable ou une valise bon marché. Vérifiez les franchises bagages de l'Air Serbia JU 252. Payez un bagage en soute en ligne avant 14:00 (moins cher qu'au comptoir, en général). Liquides et bocaux en soute.",

@@ -593,7 +593,8 @@
       <h2 class="h">Limites connues</h2>
       <ul class="tips">
         <li>Aucun horaire n'est vérifié en temps réel : tout a été recherché le ${fmtDate(T.meta.checked)}. Les statuts « À vérifier » signalent les infos à confirmer.</li>
-        <li>L'horaire du samedi de Maestro, la carte du Pavilion, les horaires du Little Bay et de Saint-Sava n'ont pas pu être confirmés en ligne.</li>
+        <li>Horaires de Maestro (09:00–16:00 le samedi) et d'Ušće (10:00–22:00) : seulement dans des annuaires, pas sur un site officiel. La carte du soir du Pavilion, les horaires de Saint-Sava et le type d'objets du marché aux puces n'ont pas pu être confirmés.</li>
+        <li>Aucune prévision météo fiable pour le 28–29/11 n'était disponible le 24/11 : consultez hidmet.gov.rs la veille.</li>
         <li>Les durées à pied sont estimées (distance à vol d'oiseau × 1,3 à 4,5 km/h) ; les prix de taxi sont des ordres de grandeur.</li>
         <li>Aucune adresse précise de supermarché ni de boulangerie près de Kalenić n'a été vérifiée : les liens « Trouver le plus proche » lancent une recherche Google Maps.</li>
         <li>Les numéros de vol sont ceux que vous avez fournis.</li>

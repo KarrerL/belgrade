@@ -3,7 +3,9 @@
 Site web progressif (PWA) pour suivre le voyage sur téléphone : planning heure par heure, carte, fiches des lieux, achats, budget, transports, checklists et plans B.
 Aucun compte ni serveur de données. Vos cases cochées, achats et dépenses restent **sur l'appareil**.
 
-Déplacements : **Yandex Go** pour les 4 trajets longs (aéroport ↔ Piramida, Piramida → hôtel, hôtel → Kalenić à l'aube, hôtel → aéroport) ; **à pied** pour tout le reste. Secours : CarGo, taxi appelé par l'hôtel, bon de taxi de l'aéroport.
+Déplacements : **Yandex Go** pour les 7 trajets longs (aéroport → Piramida → hôtel le samedi ; hôtel → Kalenić, Saint-Sava → marché aux puces → Ušće → hôtel → aéroport le dimanche) ; **à pied** pour tout le reste.
+
+Programme du dimanche (mis à jour le 24/11/2026) : check-out 06:15 → Kalenić → Saint-Sava (court, facultatif) → marché aux puces de Miljakovac → Ušće Shopping Center (en-cas à la place du déjeuner) → bagages → aéroport à 14:45. Secours : CarGo, taxi appelé par l'hôtel, bon de taxi de l'aéroport.
 
 ## Structure
 
@@ -18,7 +20,7 @@ js/pages.js             rendu des pages
 js/app.js               routeur, interactions, carte Leaflet, service worker
 sw.js                   cache hors ligne
 manifest.webmanifest    installation sur l'écran d'accueil
-vendor/leaflet/         Leaflet 1.9.4 hébergé localement (pas de CDN)
+vendor/leaflet/         Leaflet 1.9.4 hébergé localement (pas de CDN) — À PUBLIER AUSSI, sinon carte et hors ligne cassés
 img/                    photos Wikimedia Commons (licences libres)
 tools/                  scripts : géocodage, photos, vérification des liens
 ```
@@ -72,15 +74,17 @@ Scripts utiles : `python tools/check_links.py` vérifie tous les liens ; `python
 - [x] Checklists cochables et décochables (compteur 1/9 → 0/9), bouton « Tout décocher ».
 - [x] Recherche dans les lieux (et produits) et dans le guide des magasins.
 - [x] **Hors ligne réel :** serveur arrêté puis page rechargée. Planning, cases cochées et photos s'affichent depuis le cache du service worker.
+- [x] **Revérification du 24/11/2026 :** programme du dimanche (8 étapes, sans chevauchement, chaque trajet tient dans le battement prévu), 21 marqueurs sur la carte, tracé du dimanche, budget recalculé (45 000 RSD hors costumes en scénario confortable), taux NBS du 19/11. Le dossier `vendor/leaflet` manquait dans la copie en ligne : restauré (sans lui, la carte et le mode hors ligne ne fonctionnaient pas).
 - [x] Liens externes : 58 URL testées par script ; aucune n'est morte (les quelques codes 403/429 viennent de protections anti-robots).
 
 ## Limites connues
 
 - **Aucune vérification en temps réel** : les horaires et prix ont été recherchés le 27/10/2026. Les badges « À vérifier » signalent ce qui doit être confirmé.
-- **Maestro :** l'horaire du samedi n'est publié nulle part. Seuls les commerces voisins du même centre sont indiqués 09:00/10:00–16:00, et fermés le dimanche. **Appelez le +381 11 2168 032.**
+- **Maestro :** le site officiel ne publie pas d'horaires ; la fiche annuaire PlanPlus de Maestro indique sam. 09:00–16:00, dim. fermé. **Appelez le +381 11 2168 032** pour confirmer et réserver les retouches avant 16:00.
 - **Dobračina 39 = Pavilion** (boutique-hôtel avec restaurant et bars) : carte, prix et dernière commande non trouvés en ligne. Fermeture à 22:00 selon un annuaire, d'où la réservation à 20:00.
-- **Kalenić :** 06:00–19:00 selon deux guides ; présence de stands d'occasion le 29/11 non confirmée. Le seul vrai marché aux puces dont l'ouverture le dimanche est confirmée officiellement est Miljakovac (plan B, excentré).
-- Saint-Sava (horaires, crypte), Little Bay (horaires du dimanche) et les supermarchés (adresses, horaires du dimanche) ne sont pas vérifiés. Les boutons « Trouver le plus proche » lancent une recherche Google Maps.
+- **Kalenić :** 06:00–19:00 selon deux guides ; présence de stands d'occasion le 29/11 non confirmée.
+- **Marché aux puces :** le programme vise le « Beogradski buvljak » officiel à Miljakovac (08:00–19:00, fermé le lundi : site officiel et horaires de fête du 11/11/2026). La part d'objets anciens n'est pas vérifiée. Le marché informel de Zemun (dimanche ~06:00–10:00 selon un guide) n'a pas été retenu.
+- Saint-Sava (horaires, crypte), le contenu du marché aux puces (part d'objets anciens) et les supermarchés (adresses, horaires du dimanche) ne sont pas vérifiés. Ušće (10:00–22:00) n'est confirmé que par des annuaires. Les boutons « Trouver le plus proche » lancent une recherche Google Maps.
 - Les durées à pied et les prix de taxi sont estimés. Les tracés de la carte sont des lignes droites schématiques.
 - Hors ligne, le fond de carte n'affiche que les zones déjà consultées. Google Maps et les sites externes demandent Internet.
 - Les données sont propres à chaque appareil : utilisez « Copier mes données » / « Importer » pour les transférer.
@@ -92,10 +96,10 @@ Toutes les sources, avec leur date de consultation, sont listées dans le site (
 
 - Maestro : <https://muska-odela-piramida.rs/> (prix 11 800 RSD, adresses, téléphone)
 - Pavilion, Dobračina 39 : PlanPlus, Expedia, Great Small Hotels, OpenStreetMap
-- Kalenić : In Your Pocket, PlanPlus, Culture Trip, Vreme ; Miljakovac : <https://www.bgpijace.rs/?page_id=56>
+- Kalenić : In Your Pocket, PlanPlus, Culture Trip, Vreme ; marché aux puces : <https://www.bgpijace.rs/?page_id=56>, Novosti (11/11/2026), Informer, Wikipedia ; Ušće : PlanPlus, office du tourisme de Belgrade
 - Hôtel : Hotels.com, Kayak (check-in 15:00, check-out 12:00)
 - Transports : Wikipedia (gratuité depuis le 1/1/2025), guides de conférences belgradoises 2025, Bento Travel (Uber absent)
-- Taux : cours moyen NBS du 16/10/2026 = 117,40 RSD/€ (Kurir Biznis)
+- Taux : cours moyen NBS du 19/11/2026 = 117,6326 RSD/€ (Kurir Biznis)
 - Coucher du soleil : calcul astronomique NOAA, contrôlé avec timeanddate
 - Douane : Commission européenne (importations personnelles), douane.gouv.fr (franchise de 430 €)
 - Photos : Wikimedia Commons (auteurs et licences dans `data/photo-credits.js`)
