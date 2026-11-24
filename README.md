@@ -5,7 +5,7 @@ Aucun compte ni serveur de données. Vos cases cochées, achats et dépenses res
 
 Déplacements : **Yandex Go** pour les 7 trajets longs (aéroport → Piramida → hôtel le samedi ; hôtel → Kalenić, Saint-Sava → marché aux puces → Ušće → hôtel → aéroport le dimanche) ; **à pied** pour tout le reste.
 
-Programme du dimanche (mis à jour le 24/11/2026) : check-out 06:15 → Kalenić → Saint-Sava (court, facultatif) → marché aux puces de Miljakovac → Ušće Shopping Center (en-cas à la place du déjeuner) → bagages → aéroport à 14:45. Secours : CarGo, taxi appelé par l'hôtel, bon de taxi de l'aéroport.
+Programme du dimanche (mis à jour le 24/11/2026) : petit-déjeuner buffet à l'hôtel 06:00 → check-out 06:25 → Kalenić → Saint-Sava (court, facultatif) → marché aux puces de Miljakovac → Ušće Shopping Center (en-cas à la place du déjeuner) → bagages → aéroport à 14:45. Secours : CarGo, taxi appelé par l'hôtel, bon de taxi de l'aéroport.
 
 ## Structure
 

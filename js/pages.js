@@ -409,8 +409,8 @@
       </article>`;
     }).join("")}
     <section class="card">
-      <h2 class="h">${icon("bread")} Petit-déjeuner du dimanche à Kalenić</h2>
-      <p>Les boulangeries et pâtisseries qui entourent le marché (In Your Pocket) suffisent : burek sa sirom, pita, yaourt. Je ne peux confirmer le nom ni les horaires d'aucune boulangerie précise. ⚠ Saindoux possible dans la pâte.</p>
+      <h2 class="h">${icon("bread")} Petit-déjeuner du dimanche</h2>
+      <p>Buffet de l'hôtel, de 06:00 à 10:30 : nous y sommes à l'ouverture, avant Kalenić. Pour vous : œufs, fromages, yaourts, pains, poisson fumé s'il y en a. Au marché, les boulangeries autour de Kalenić permettent ensuite de goûter un burek sa sirom (⚠ saindoux possible dans la pâte).</p>
     </section>
     <section class="card">
       <h2 class="h">Spécialités : que commander ?</h2>

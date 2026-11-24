@@ -63,8 +63,9 @@ window.TRIP = {
     { day: "sat", time: "16:00", label: "Fermeture de Maestro le samedi (09:00–16:00 selon l'annuaire PlanPlus), fermé dimanche", status: "verifier", place: "maestro" },
     { day: "sat", time: "16:01", label: "Coucher du soleil : être au belvédère de Kalemegdan", status: "estime", place: "kalemegdan" },
     { day: "sat", time: "20:00", label: "Table réservée au Pavilion (fermeture annoncée à 22:00)", status: "verifier", place: "pavilion" },
-    { day: "sun", time: "06:15", label: "Check-out et bagages laissés à la réception", status: "verifier", place: "hotel" },
-    { day: "sun", time: "06:35", label: "Yandex Go de l'hôtel vers Kalenić", status: "estime", place: "hotel" },
+    { day: "sun", time: "06:00", label: "Petit-déjeuner buffet à l'hôtel dès l'ouverture (06:00–10:30, horaires donnés par vous)", status: "verifier", place: "hotel" },
+    { day: "sun", time: "06:25", label: "Check-out et bagages laissés à la réception", status: "verifier", place: "hotel" },
+    { day: "sun", time: "06:40", label: "Yandex Go de l'hôtel vers Kalenić", status: "estime", place: "hotel" },
     { day: "sun", time: "09:20", label: "Yandex Go vers le marché aux puces (ouvert dès 08:00)", status: "confirme", place: "miljakovac" },
     { day: "sun", time: "11:10", label: "Yandex Go vers Ušće (ouvert 10:00–22:00)", status: "verifier", place: "usce" },
     { day: "sun", time: "13:50", label: "Quitter Ušće, sans exception, pour l'hôtel", status: "estime", place: "usce" },
@@ -185,12 +186,12 @@ window.TRIP = {
     {
       id: "hotel", name: "Nobel Design Hotel", cat: "hotel",
       address: "Balkanska 18, 11000 Belgrade (Stari Grad)", lat: 44.81135, lng: 20.46008, photo: null,
-      hours: "Check-in à partir de 15:00 · check-out avant 12:00", status: "verifier",
+      hours: "Check-in à partir de 15:00 · check-out avant 12:00 · petit-déjeuner buffet 06:00–10:30 (horaires que vous m'avez donnés)", status: "verifier",
       description: "Hôtel situé en plein centre, entre Terazije et Zeleni venac : Knez Mihailova est à 5 min, Kalemegdan à ≈ 25 min à pied.",
       why: "Camp de base idéal : presque tout le programme se fait à pied depuis l'hôtel.",
       tips: [
         "Hotels.com et Kayak indiquent un check-in à 15:00 et un check-out à 12:00. D'anciennes fiches (« LifeDesign Hotel ») indiquent 14:00 avec early check-in payant (4 920 RSD) : à confirmer avec l'hôtel.",
-        "Écrivez à l'hôtel avant le départ : dépôt des bagages possible le samedi ? check-out le dimanche à 06:15 et garde des bagages jusqu'à 14:45 ?",
+        "Écrivez à l'hôtel avant le départ : dépôt des bagages possible le samedi ? check-out le dimanche à 06:25 (après le buffet de 06:00) et garde des bagages jusqu'à 14:45 ?",
         "Le dimanche, nous ne repassons qu'à 14:05 : un départ tardif ne sert que si vous voulez garder la chambre."
       ],
       budget: "Déjà réservé",
@@ -526,11 +527,11 @@ window.TRIP = {
       id: "L8", day: "sat", time: "21:45", from: "pavilion", to: "hotel", mode: "walk",
       duration: "20 min", distance: "≈ 1,4 km", price: "Gratuit", status: "estime",
       instructions: "Même chemin en sens inverse, par les rues éclairées (Skadarlija, place de la République).",
-      alternative: "Yandex Go devant le Pavilion, surtout s'il fait très froid : réveil à 06:15.",
+      alternative: "Yandex Go devant le Pavilion, surtout s'il fait très froid : réveil à 05:45.",
       sources: []
     },
     {
-      id: "L9", day: "sun", time: "06:35", from: "hotel", to: "kalenic", mode: "taxi",
+      id: "L9", day: "sun", time: "06:40", from: "hotel", to: "kalenic", mode: "taxi",
       duration: "7–10 min", distance: "≈ 2,4 km", price: "≈ 500–800 RSD (estimation)", status: "estime",
       instructions: "Yandex Go commandé à la réception après le check-out. Adresse : « Kalenić pijaca, Maksima Gorkog ».",
       alternative: "À pied, 30 min (Terazije → Kralja Milana → Slavija → Njegoševa) : il fait encore nuit (lever du soleil 06:52).",
@@ -641,36 +642,37 @@ window.TRIP = {
     {
       id: "sat-back", day: "sat", start: "21:45", end: "22:10", place: "hotel", priority: "recommande",
       title: "Retour à l'hôtel",
-      desc: "Retour à pied ou en taxi. Préparez les sacs pour le marché et réglez le réveil à 06:15.",
+      desc: "Retour à pied ou en taxi. Bouclez les valises, préparez les sacs pour le marché et réglez le réveil à 05:45 (buffet dès 06:00).",
       leg: "L8", budget: "—", tips: ["Sac cabas et espèces pour Kalenić."], booking: null
     },
     {
-      id: "sun-checkout", day: "sun", start: "06:15", end: "06:35", place: "hotel", priority: "imperatif",
+      id: "sun-breakfast", day: "sun", start: "06:00", end: "06:25", place: "hotel", priority: "recommande",
+      title: "Petit-déjeuner buffet à l'hôtel",
+      desc: "Buffet du Nobel Design Hotel, servi de 06:00 à 10:30 : nous y sommes dès l'ouverture. C'est le dernier vrai repas avant l'avion (pas de déjeuner assis) : mangez bien.",
+      leg: null, budget: "Selon votre réservation (inclus ou non : à vérifier)",
+      tips: ["Réveil à 05:45, valises bouclées la veille au soir.", "Pour vous au buffet : œufs, fromages, yaourts, pains, poisson fumé s'il y en a ; évitez la charcuterie."],
+      booking: null
+    },
+    {
+      id: "sun-checkout", day: "sun", start: "06:25", end: "06:40", place: "hotel", priority: "imperatif",
       title: "Check-out et bagages à la réception",
       desc: "Nous ne repassons à l'hôtel qu'à 14:05, après l'heure de check-out (12:00) : check-out dès le matin, bagages laissés à la réception jusqu'à 14:45.",
       leg: null, budget: "—",
       tips: ["Gardez sur vous passeports, chargeur et un sac cabas vide pour les achats.", "Costumes déjà rangés dans la housse."],
-      booking: "Garde des bagages de 06:15 à 14:45 (à confirmer avec l'hôtel)"
+      booking: "Garde des bagages de 06:25 à 14:45 (à confirmer avec l'hôtel)"
     },
     {
-      id: "sun-kalenic", day: "sun", start: "06:45", end: "08:15", place: "kalenic", priority: "imperatif",
+      id: "sun-kalenic", day: "sun", start: "06:50", end: "08:40", place: "kalenic", priority: "imperatif",
       title: "Marché de Kalenić",
-      desc: "Arrivée juste avant le lever du soleil (06:52), quand les vendeurs s'installent. Tour complet : halle et étals de fromages et kajmak (dégustation), fruits et légumes d'hiver, conserves (ajvar, turšija), miel, puis la périphérie pour les éventuels stands d'occasion.",
+      desc: "Arrivée vers le lever du soleil (06:52), quand les vendeurs s'installent. Tour complet : halle et étals de fromages et kajmak (dégustation), fruits et légumes d'hiver, conserves (ajvar, turšija), miel, puis la périphérie pour les éventuels stands d'occasion. Les boulangeries autour du marché permettent de goûter un burek si l'envie vous prend.",
       leg: "L9", budget: "1 500–4 000 RSD (estimation)",
       tips: [
         "Ordre conseillé : 1) produits laitiers (dégustation) ; 2) conserves et ajvar en bocaux fermés ; 3) miel et fruits secs ; 4) périphérie et artisanat.",
         "Espèces en petites coupures ; les vendeurs proposent souvent de goûter.",
         "Fromage et kajmak : à consommer sur place, interdits à l'importation dans l'UE.",
-        "Vous porterez vos achats jusqu'à 14:05 : gardez les bocaux et achats lourds pour la fin de la visite."
+        "Vous porterez vos achats jusqu'à 14:05 : gardez les bocaux et achats lourds pour la fin de la visite.",
+        "⚠ Burek : la garniture « sir » est du fromage, mais la pâte peut contenir du saindoux. Demandez « bez masti? »."
       ],
-      booking: null
-    },
-    {
-      id: "sun-breakfast", day: "sun", start: "08:15", end: "08:40", place: "kalenic", priority: "recommande",
-      title: "Petit-déjeuner dans une boulangerie du marché",
-      desc: "Burek sa sirom et yaourt, ou pâtisserie, dans l'une des boulangeries qui bordent le marché (aucune adresse précise vérifiée). C'est le dernier vrai repas avant l'avion : mangez bien.",
-      leg: null, budget: "≈ 300–600 RSD/pers. (estimation)",
-      tips: ["⚠ Burek : la garniture « sir » est du fromage, mais la pâte peut contenir du saindoux. Demandez « bez masti? »."],
       booking: null
     },
     {
@@ -825,7 +827,7 @@ window.TRIP = {
     note: "Montants estimés pour 2 personnes, hors vols et hôtel. Seul le prix d'un costume Maestro (11 800 RSD) provient d'une source officielle ; tout le reste est une estimation. Aucun montant n'est un tarif imposé.",
     categories: [
       { id: "transports", name: "Transports", essential: true, scenarios: { eco: 7000, confort: 9000, genereux: 11000 }, basis: "7 courses Yandex Go : aéroport ×2 (≈ 1 300–2 000), Piramida, Kalenić, marché aux puces, Ušće, hôtel" },
-      { id: "repas", name: "Repas", essential: true, scenarios: { eco: 10000, confort: 16000, genereux: 22000 }, basis: "Kafana « ? », Pavilion, boulangerie, en-cas à Ušće" },
+      { id: "repas", name: "Repas", essential: true, scenarios: { eco: 10000, confort: 16000, genereux: 22000 }, basis: "Kafana « ? », Pavilion, en-cas à Ušće (petit-déjeuner à l'hôtel selon la réservation)" },
       { id: "cafes", name: "Cafés", essential: false, scenarios: { eco: 1500, confort: 3000, genereux: 5000 }, basis: "≈ 300–500 RSD le café (estimation)" },
       { id: "visites", name: "Visites", essential: false, scenarios: { eco: 0, confort: 0, genereux: 2400 }, basis: "Sites gratuits ; option visite guidée de Saint-Sava 10 €/pers." },
       { id: "snacks", name: "Snacks", essential: false, scenarios: { eco: 2000, confort: 4000, genereux: 7000 }, basis: "Achats en supermarché et au marché" },
@@ -847,7 +849,7 @@ window.TRIP = {
     { id: "avant", name: "Avant le départ", items: [
       "Passeports valides (la Serbie est hors UE et hors Schengen)",
       "Appeler Maestro (+381 11 2168 032) : confirmer 09:00–16:00 le sam. 28/11 et des retouches prêtes avant 16:00",
-      "E-mail à l'hôtel : check-in samedi, check-out dimanche à 06:15 et garde des bagages jusqu'à 14:45",
+      "E-mail à l'hôtel : check-in samedi, check-out dimanche à 06:25 et garde des bagages jusqu'à 14:45 ; petit-déjeuner inclus ?",
       "Installer Yandex Go (moyen principal), vérifier le mode de paiement proposé (carte ou espèces) ; CarGo en secours",
       "Télécharger la carte hors ligne de Belgrade dans Google Maps",
       "Ouvrir ce site une fois en ligne sur le téléphone (mise en cache) et l'ajouter à l'écran d'accueil",
